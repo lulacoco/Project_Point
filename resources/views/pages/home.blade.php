@@ -1,6 +1,4 @@
-<!-- example -->
-
-@extends('layouts.default')
+@extends('layouts.master')
 @section('content')
     i am the home page
 @stop
