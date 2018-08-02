@@ -1,25 +1,45 @@
 .navbar
 {
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     width: 100%;
 }
 
 .navbar-menu
 {
-    display: flex;
-    justify-content: space-between;
-    flex: 1 0 auto;
-    margin-right: 10%;
-    margin-left: 20%;
+    margin-left: 3%;
+    size: 35px;
 }
 
-.navbar-brand
+
+.navbar-name
 {
-    display: flex;
-    flex: 0 1 auto;
+    font-size: 50px;
+    margin-left: 5%;
 }
 
-.navbar-start
+.navbar-logo
 {
-    font-size: 40px;
+
+}
+
+.button
+{
+    border-color: transparent;
+    table-border-color-light: transparent;
+}
+
+.footer
+{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:75px;
+    background-color: white;
+}
+
+.footer-item
+{
+    margin-left: 43%;
 }

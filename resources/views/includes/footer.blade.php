@@ -1,1 +1,7 @@
-<div id="copyright text-right">pointdancestudioinfo@gmail.com</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <a class="footer-item">
+            pointdancestudioinfo@gmail.com
+        </a>
+    </div>
+</footer>

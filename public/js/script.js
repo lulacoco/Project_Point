@@ -1,52 +1,10 @@
-// document.addEventListener("DOMContentLoaded", function(event) {
-//     document.getElementsByClassName("dropdown-content").style.display = "none";
-// });
-
-'use strict';
-
-document.addEventListener('DOMContentLoaded', function ()
+document.addEventListener("DOMContentLoaded", function(event)
 {
-    // Dropdowns
-
-    var $dropdowns = getAll('.dropdown:not(.is-hoverable)');
-
-    if ($dropdowns.length > 0)
+    document.getElementById("dropdown-trigger").addEventListener("click", function ()
     {
-        $dropdowns.forEach(function ($el)
-        {
-            $el.addEventListener('click', function (event)
-            {
-                event.stopPropagation();
-                $el.classList.toggle('is-active');
-            });
-        });
-
-        document.addEventListener('click', function (event)
-        {
-            closeDropdowns();
-        });
-    }
-
-    function closeDropdowns()
-    {
-        $dropdowns.forEach(function ($el)
-        {
-            $el.classList.remove('is-active');
-        });
-    }
-
-    // Close dropdowns if ESC pressed
-    document.addEventListener('keydown', function (event)
-    {
-        var e = event || window.event;
-        if (e.keyCode === 27) {
-            closeDropdowns();
-        }
-    });
-
-    // Functions
-    function getAll(selector)
-    {
-        return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
-    }
+        if(document.getElementById("dropdown-menu").style.display === "block")
+            document.getElementById("dropdown-menu").style.display = "none";
+        else
+            document.getElementById("dropdown-menu").style.display = "block";
+    })
 });
