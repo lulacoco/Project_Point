@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<div class="container">
+<div>
     <header class="row">
         @include('includes.header')
     </header>
@@ -17,6 +17,5 @@
         @include('includes.footer')
     </footer>
 </div>
-
 </body>
 </html>
