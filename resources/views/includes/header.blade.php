@@ -3,7 +3,7 @@
         <div class="dropdown">
             <div id="dropdown-trigger">
                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span style="font-size: 30px; color: #686868; background: white; border-collapse: collapse">
+                        <span id="icon-wrapper">
                             <i class="fas fa-bars"></i>
                         </span>
                 </button>
@@ -33,14 +33,14 @@
             </div>
         </div>
     </div>
-        <div class="navbar-name">
-            <a class="navbar-item">
-                Point Dance Studio
-            </a>
-        </div>
-        <div class="navbar-logo">
-            <a class="navbar-item" href="http://localhost:8000/">
-                <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/11053832_414031055440728_1550582759575169959_n.jpg?_nc_cat=0&oh=f476577c2b4c3c5410f2b5d7a90abe08&oe=5BD9478B" width="200" height="150">
-            </a>
-        </div>
+    <div class="navbar-name">
+        <a class="navbar-item">
+            Point Dance Studio
+        </a>
+    </div>
+    <div class="navbar-logo">
+        <a class="navbar-item" href="http://localhost:8000/">
+            <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/11053832_414031055440728_1550582759575169959_n.jpg?_nc_cat=0&oh=f476577c2b4c3c5410f2b5d7a90abe08&oe=5BD9478B" width="200" height="150">
+        </a>
+    </div>
 </nav>

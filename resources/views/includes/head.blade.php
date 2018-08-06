@@ -3,6 +3,8 @@
 
 <title>Point Dance Studio</title>
 
+<LINK REL="SHORTCUT ICON" HREF="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/11053832_414031055440728_1550582759575169959_n.jpg?_nc_cat=0&oh=f476577c2b4c3c5410f2b5d7a90abe08&oe=5BD9478B">
+
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 <script src="{{asset('js/script.js')}}"></script>
