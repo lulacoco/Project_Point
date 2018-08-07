@@ -10,23 +10,26 @@
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <a href="navbar-item" class="dropdown-item is-active" href="http://localhost:8000/grafik">
+                    <a href="/" class="dropdown-item is-active" href="http://localhost:8000/">
+                        Strona Główna
+                    </a>
+                    <a href="schedule" class="dropdown-item is-active" href="http://localhost:8000/schedule">
                         Grafik
                     </a>
-                    <a href="navbar-item" class="dropdown-item is-active" href="http://localhost:8000/grupy">
+                    <a href="groups" class="dropdown-item is-active" href="http://localhost:8000/groups">
                         Grupy
                     </a>
-                    <a href="navbar-item" class="dropdown-item is-active" href="http://localhost:8000/wydarzenia">
+                    <a href="events" class="dropdown-item is-active" href="http://localhost:8000/events">
                         Wydarzenia
                     </a>
-                    <a href="navbar-item" class="dropdown-item is-active" href="http://localhost:8000/o_nas">
+                    <a href="about" class="dropdown-item is-active" href="http://localhost:8000/about">
                         O nas
                     </a>
-                    <a href="navbar-item" class="dropdown-item is-active" href="http://localhost:8000/o_nas">
+                    <a href="contact" class="dropdown-item is-active" href="http://localhost:8000/contact">
                         Kontakt
                     </a>
                     <hr class="dropdown-divider">
-                    <a href="navbar-item" class="dropdown-item is-active" href="http://localhost:8000/kontakt">
+                    <a href="login" class="dropdown-item is-active" href="http://localhost:8000/login">
                         Zaloguj się
                     </a>
                 </div>
