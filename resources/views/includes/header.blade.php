@@ -3,7 +3,7 @@
         <div class="dropdown">
             <div id="dropdown-trigger">
                 <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                        <span id="icon-wrapper">
+                       <span id="icon-wrapper">
                             <i class="fas fa-bars"></i>
                         </span>
                 </button>
