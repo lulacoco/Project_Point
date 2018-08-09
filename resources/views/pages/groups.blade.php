@@ -6,7 +6,9 @@
             <a href="#item1">
                 <div class="hexagon">
                     <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/38666847_2394835227208183_1815771920591749120_n.jpg?_nc_cat=0&oh=1d7c16a21a7995b3e9aa43c4962b0d29&oe=5BCB4A61" alt="West Point Crew">
-                    <div class ="overlay"></div>
+                    <div class ="overlay">
+                        <div class="crew-name">West Point Crew</div>
+                    </div>
                 </div>
             </a>
         </li>
@@ -15,6 +17,7 @@
                 <div class="hexagon">
                     <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/32847923_952739224903239_7937861979832582144_o.jpg?_nc_cat=0&oh=7c7c76aee3d004451d37f8fe9ed82a4c&oe=5BF8B399" alt="Punie Crew">
                     <div class ="overlay"></div>
+                    <div class="crew-name">Punie Crew</div>
                 </div>
             </a>
         </li>
@@ -23,6 +26,7 @@
                 <div class="hexagon">
                     <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t31.0-8/29744239_1896732177027498_8474655908403729548_o.jpg?_nc_cat=0&oh=3329b069f24fa05e716a75100cc42885&oe=5BCF9A32" alt="First Point">
                     <div class ="overlay"></div>
+                    <div class="crew-name">First Point</div>
                 </div>
             </a>
         </li>
@@ -31,6 +35,7 @@
                 <div class="hexagon">
                     <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/38753039_2396876553670717_5314050932399407104_n.jpg?_nc_cat=0&oh=1d6d12459603f526d26509f94098e159&oe=5BCD0F25" alt="3.0">
                     <div class ="overlay"></div>
+                    <div class="crew-name">3.0</div>
                 </div>
             </a>
         </li>
@@ -39,6 +44,7 @@
                 <div class="hexagon">
                     <img class="no-point" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/28685203_1695600607165859_5846885424931853631_n.jpg?_nc_cat=0&oh=c58b7aa26e76d647c6df1e744fc3f3d5&oe=5BFB0A1C" alt="No Point Crew">
                     <div class ="overlay"></div>
+                    <div class="crew-name">No Point Crew</div>
                 </div>
             </a>
         </li>
@@ -47,6 +53,7 @@
                 <div class="hexagon">
                     <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/35629239_978813432295818_6429790011771584512_o.jpg?_nc_cat=0&oh=f0e8aada5c5b650ad53d11449d63a7da&oe=5C04B54E" alt="Pointony">
                     <div class ="overlay"></div>
+                    <div class="crew-name">Pointony</div>
                 </div>
             </a>
         </li>
@@ -55,6 +62,7 @@
                 <div class="hexagon">
                     <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/38749082_2397230086968697_1424310412047810560_n.jpg?_nc_cat=0&oh=abab540e676513aca86883ebc1bd4035&oe=5C00AD27" alt="Początkująca">
                     <div class ="overlay"></div>
+                    <div class="crew-name">Początkująca</div>
                 </div>
             </a>
         </li>
@@ -64,7 +72,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>WEST POINT CREW</h2>
@@ -89,7 +97,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>PUNIE CREW</h2>
@@ -111,7 +119,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>FIRST POINT</h2>
@@ -130,7 +138,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>3.0</h2>
@@ -149,7 +157,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>NO POINT</h2>
@@ -172,7 +180,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>POINTONY</h2>
@@ -191,7 +199,7 @@
         <div class="left">
             <a href="#">
                 <div class="button-close">
-                    <i class="fas fa-angle-double-left"></i>
+                    <i class="fas fa-angle-double-right"></i>
                 </div>
             </a>
             <h2>POCZĄTKUJĄCA</h2>

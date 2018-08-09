@@ -3,7 +3,6 @@
     @include('includes.head')
 </head>
 <body>
-
 <div>
     <header class="row">
         @include('includes.header')
