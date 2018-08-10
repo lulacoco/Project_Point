@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\DB;
+
 
 Route::get('/', function ()
 {
@@ -12,7 +14,9 @@ Route::get('/schedule', function()
 
 Route::get('/groups', function()
 {
-    return view('pages.groups');
+    $groups = DB::table('groups')->get();
+//    return view('pages.groups');
+    return view('pages.groups', compact('groups'));
 });
 
 Route::get('/events', function()
@@ -22,7 +26,12 @@ Route::get('/events', function()
 
 Route::get('/about', function()
 {
-    return view('pages.about');
+    $users = DB::table('users')
+        ->join('user_roles', 'users.id','=','user_roles.id')->where('user_roles.role_id','=',2)
+        ->get();
+//    return view('pages.about');
+
+    return view('pages.about', compact('users'));
 });
 
 Route::get('/contact', function()

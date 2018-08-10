@@ -17,6 +17,8 @@ class Users extends Migration
             $table->string('e_mail');
             $table->integer('age');
             $table->string('password');
+            $table->text('description');
+            $table->string('src');
         });
     }
 
