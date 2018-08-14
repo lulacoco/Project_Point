@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     protected $fillable = [
-        'name', 'description',
+        'name', 'description', 'start_date', 'end_date',
     ];
 
     public function users()

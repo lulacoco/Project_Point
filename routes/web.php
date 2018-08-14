@@ -9,14 +9,17 @@ Route::get('/', function ()
 
 Route::get('/schedule', function()
 {
-    return view('pages.schedule');
+    $events = DB::table('events')->get();
+
+    return view('pages.schedule', compact('events'));
 });
 
 Route::get('/groups', function()
 {
-    $groups = DB::table('groups')->get();
-//    return view('pages.groups');
-    return view('pages.groups', compact('groups'));
+//    $groups = DB::table('groups')->get();
+////    return view('pages.groups');
+//    return view('pages.groups', compact('groups'));
+    return view('pages.groups');
 });
 
 Route::get('/events', function()
