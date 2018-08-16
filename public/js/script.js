@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event)
         else
             document.getElementById("dropdown-menu").style.display = "block";
     })
+});
 
-    moment.locale('pl');
 
     // pictures slideshow
 
@@ -56,4 +56,3 @@ document.addEventListener("DOMContentLoaded", function(event)
     //     alert("hi");
     //  setTimeout(autoSlide, 5000);
     // }
-});

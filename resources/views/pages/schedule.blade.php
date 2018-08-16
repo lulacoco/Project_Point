@@ -8,14 +8,7 @@
     </div>
 
     <table>
-
-        {{--@foreach($events as $event)--}}
-            {{--<script>--}}
-                {{--console.log(moment('2018-09-07 18:00:00').format('LL'));--}}
-                {{--<th>{{moment($event->start_date).format('LL')}}</th>--}}
-            {{--</script>--}}
-        {{--@endforeach--}}
-        <th>Poniedzialek</th>
+        <th>Termin</th>
         <th>Lekcja</th>
         <th>Opis</th>
         <th></th>
@@ -40,8 +33,11 @@
 
             {{--@endif--}}
             {{--</div>--}}
+
             <tr>
+                {{--<script src="js/date.js"></script>--}}
                 <td>{{($event->start_date) . " - " . $event->end_date}}</td>
+                {{--<td>{{(moment($event->start_date).format("LLLL")) . " - " . $event->end_date}}</td>--}}
                 <td>{{$event->name}}</td>
                 <td>{{$event->description}}</td>
             </tr>
@@ -49,3 +45,5 @@
     </table>
 
 @stop
+
+
