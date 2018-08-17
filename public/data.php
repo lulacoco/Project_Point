@@ -1,9 +1,11 @@
 <?php
-
-//$myObj->name = "John";
-//$myObj->age = 30;
-//$myObj->city = "New York";
 //
-//$myJSON = json_encode($myObj);
+//$conn = mysqli_connect("localhost", "root", "", "project_point");
+//$result = mysqli_query($conn, "SELECT * FROM events");
+//$data = array();
+//while($row = mysqli_fetch_assoc($result))
+//{
+//    $data[]=$row;
+//}
 //
-//echo $myJSON;
+//echo json_encode($data);

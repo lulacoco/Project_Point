@@ -8,10 +8,10 @@
     </div>
 
     <table>
-        <th>Termin</th>
+        <th>Dzień</th>
+        <th>Data</th>
         <th>Lekcja</th>
         <th>Opis</th>
-        <th></th>
         @foreach($events as $event)
             {{--<div id="day-name">--}}
             {{--@if(($event->start_date)=="16:40")--}}
@@ -35,7 +35,7 @@
             {{--</div>--}}
 
             <tr>
-                {{--<script src="js/date.js"></script>--}}
+                <script src="js/date.js"></script>
                 <td>{{($event->start_date) . " - " . $event->end_date}}</td>
                 {{--<td>{{(moment($event->start_date).format("LLLL")) . " - " . $event->end_date}}</td>--}}
                 <td>{{$event->name}}</td>

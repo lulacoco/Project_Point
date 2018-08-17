@@ -21,6 +21,7 @@ class User_Seeder extends Seeder
         $user->save();
         $user->roles()->attach(2);
         $user->events()->attach(1);
+        $user->workshops()->attach(1);
         $user->groups()->attach(2);
 
 
@@ -40,7 +41,9 @@ class User_Seeder extends Seeder
         $user->save();
         $user->roles()->attach(2);
         $user->events()->attach(1);
+        $user->workshops()->attach(1);
         $user->groups()->attach(2);
+
 
         $user = new User();
         $user->first_name = 'Dominika';
@@ -56,6 +59,7 @@ class User_Seeder extends Seeder
         $user->save();
         $user->roles()->attach(2);
         $user->events()->attach(1);
+        $user->workshops()->attach(1);
         $user->groups()->attach(2);
 
 
@@ -72,6 +76,7 @@ class User_Seeder extends Seeder
         $user->save();
         $user->roles()->attach(2);
         $user->events()->attach(1);
+        $user->workshops()->attach(1);
         $user->groups()->attach(2);
 
 
@@ -87,6 +92,7 @@ class User_Seeder extends Seeder
         $user->save();
         $user->roles()->attach(3);
         $user->events()->attach(1);
+        $user->workshops()->attach(1);
         $user->groups()->attach(2);
     }
 }

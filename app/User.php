@@ -27,10 +27,17 @@ class User extends Model
         return $this->belongsToMany(Event::class, 'event_users','user_id', 'event_id')->withTimestamps();
     }
 
+    public function workshops()
+    {
+        return $this->belongsToMany(Workshop::class, 'workshop_users','user_id', 'workshop_id')->withTimestamps();
+    }
+
     public function groups()
     {
         return $this->belongsToMany(Group::class, 'user_groups','user_id', 'group_id')->withTimestamps();
     }
+
+
 
     public function hasAnyRole($roles)
     {
