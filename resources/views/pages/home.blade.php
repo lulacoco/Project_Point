@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    {{--<div class="essence">--}}
+    <div class="essence">
         <div id = "slide">
             <img class="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/35852499_978815935628901_3482892463268429824_o.jpg?_nc_cat=0&oh=c797dbcc4c12ed2cb8f5bfb8e2fa8e9d&oe=5BFEAD46" alt="Dancers">
             <img class="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/35922811_978814038962424_2454020875574312960_o.jpg?_nc_cat=0&oh=f1862605460760c4c0011ff6379cf0af&oe=5C0F7644" alt="Show">
@@ -31,7 +31,7 @@
             <p> W naszym Studio poznasz style Street Dance - hip hop, popping, locking, house, waacking, jak również nowocześniejsze formy czerpiące ze Street Dance - new age, JFH, jazz-funk.
             Nasi instruktorzy to aktywni na polskiej i światowej scenie tancerze, którzy wciąż doskonalą swoje umiejętności. </p>
         </div>
-    {{--</div>--}}
+    </div>
 
 
 <script>

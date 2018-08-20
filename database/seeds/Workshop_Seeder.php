@@ -7,12 +7,36 @@ class Workshop_Seeder extends Seeder
 {
     public function run()
     {
+
         $workshop = new Workshop();
-        $workshop ->name = 'Big Point';
+        $workshop ->name = 'Casting/Nabór do West Point, No Point, Grupa 3.0, First Point';
+        $workshop ->description = 'Cześć i czołem, zapraszamy wszystkich chętnych na casting do formacji i grup w Point Dance Studio :) W tym roku każdy ma szansę, aby dołączyć do: 
+        ■ WEST POINT (prowadzący Greogry i Lukasz), ■ NO POINT (prowadzący Gregory), ■ GRUPA 3.0 (prowadzący Marcin i Gregory), ■ FIRST POINT (prowadzący Gorzki i O-Shit)';
+        $workshop ->public = 1;
+        $workshop ->start_date = '2018-09-09 11:00:00';
+        $workshop ->end_date = '2018-09-09 18:00:00';
+        $workshop ->src = 'https://www.facebook.com/PointDanceStudio/videos/1035797016597459/?ref=3&ref_newsfeed_story_type=regular&action_history=[%7B%22surface%22%3A%22newsfeed%22%2C%22mechanism%22%3A%22feed_story%22%2C%22extra_data%22%3A[]%7D]';
+        $workshop ->save();
+
+
+        $workshop = new Workshop();
+        $workshop ->name = 'Dni Otwarte w Point Dance Studio 1 - 2 września';
+        $workshop ->description = 'Siemanko cześć i czołem! W tym roku, jak co roku, koniec wakacji oznacza tylko tyle, że coś się kończy, a coś się zaczyna. 
+        U nas na przykład zaczyna się nowy sezon zajęć tanecznych. W związku z czym zapraszamy serdecznie do nas - do Pointa na Dni Otwarte! Sprawdź co się u nas dzieje :)';
+        $workshop ->public = 1;
+        $workshop ->start_date = '2018-09-01 13:00:00';
+        $workshop ->end_date = '2018-09-02 20:00:00';
+        $workshop ->src = 'https://www.youtube.com/embed/2gQb8ifyGBI';
+        $workshop ->save();
+
+
+        $workshop = new Workshop();
+        $workshop ->name = 'Big ■ Point';
         $workshop ->description = 'Z okazji 3 urodzin Pointa zapraszamy na konkretny event do Poznania. Warsztaty taneczne, contest Waacking i obowiązkowe After Party:) Świętujemy 3 urodziny Point Dance Studio i 5 urodziny ekipy Punie Crew. ';
         $workshop ->public = 1;
         $workshop ->start_date = '2018-04-14 10:00:00';
         $workshop ->end_date = '2018-04-15 18:00:00';
+        $workshop ->src = 'https://www.youtube.com/embed/09DWEIwK-Xo?rel=0';
         $workshop ->save();
     }
 }

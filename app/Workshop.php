@@ -14,5 +14,4 @@ class Workshop extends Model
     {
         return $this->belongsToMany(User::class, 'workshop_users','workshop_id', 'user_id')->withTimestamps();
     }
-
 }

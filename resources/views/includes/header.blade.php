@@ -19,7 +19,7 @@
                     <a href="groups" class="dropdown-item is-active" href="http://localhost:8000/groups">
                         Grupy
                     </a>
-                    <a href="events" class="dropdown-item is-active" href="http://localhost:8000/events">
+                    <a href="workshops" class="dropdown-item is-active" href="http://localhost:8000/workshops">
                         Wydarzenia
                     </a>
                     <a href="about" class="dropdown-item is-active" href="http://localhost:8000/about">

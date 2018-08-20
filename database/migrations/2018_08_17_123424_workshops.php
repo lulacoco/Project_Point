@@ -16,6 +16,7 @@ class Workshops extends Migration
             $table->boolean('public');
             $table->timestamp('start_date');
             $table->timestamp('end_date');
+            $table->string('src');
             $table->timestamps();
         });
     }

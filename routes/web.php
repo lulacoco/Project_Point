@@ -22,9 +22,11 @@ Route::get('/groups', function()
     return view('pages.groups');
 });
 
-Route::get('/events', function()
+Route::get('/workshops', function()
 {
-    return view('pages.events');
+    $workshops = DB::table('workshops')->get();
+
+    return view('pages.workshops', compact('workshops'));
 });
 
 Route::get('/about', function()

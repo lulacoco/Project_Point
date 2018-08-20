@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(event)
         else
             document.getElementById("dropdown-menu").style.display = "none";
     })
+
 });
 
 
