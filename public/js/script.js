@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event)
 {
-    // button function
+    // menu button function
 
     document.getElementById("dropdown-trigger").addEventListener("click", function ()
     {
@@ -10,7 +10,30 @@ document.addEventListener("DOMContentLoaded", function(event)
             document.getElementById("dropdown-menu").style.display = "none";
     })
 
+    //
+    document.getElementById("desc-button-trigger").addEventListener("click", function ()
+    {
+        if(document.getElementById("event-desc").style.display === "none")
+        {
+            document.getElementById("description-button").innerText = 'Zamknij opis';
+            document.getElementById("event-desc").style.display = "block";
+        }
+        else
+        {
+            document.getElementById("event-desc").style.display = "none";
+            document.getElementById("description-button").innerText = 'Opis';
+        }
+    })
+
+    document.getElementById("sign-up-button-trigger").addEventListener("click", function ()
+    {
+        if(document.getElementById("event-sign-up").style.display === "none")
+            document.getElementById("event-sign-up").style.display = "block";
+        else
+            document.getElementById("event-sign-up").style.display = "none";
+    })
 });
+
 
 
 

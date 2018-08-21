@@ -15,12 +15,12 @@ class Workshop_Seeder extends Seeder
         $workshop ->public = 1;
         $workshop ->start_date = '2018-09-09 11:00:00';
         $workshop ->end_date = '2018-09-09 18:00:00';
-        $workshop ->src = 'https://www.facebook.com/PointDanceStudio/videos/1035797016597459/?ref=3&ref_newsfeed_story_type=regular&action_history=[%7B%22surface%22%3A%22newsfeed%22%2C%22mechanism%22%3A%22feed_story%22%2C%22extra_data%22%3A[]%7D]';
+        $workshop ->src = 'https://www.youtube.com/embed/b86uXELpzNk';
         $workshop ->save();
 
 
         $workshop = new Workshop();
-        $workshop ->name = 'Dni Otwarte w Point Dance Studio 1 - 2 września';
+        $workshop ->name = 'Dni Otwarte w Point Dance Studio';
         $workshop ->description = 'Siemanko cześć i czołem! W tym roku, jak co roku, koniec wakacji oznacza tylko tyle, że coś się kończy, a coś się zaczyna. 
         U nas na przykład zaczyna się nowy sezon zajęć tanecznych. W związku z czym zapraszamy serdecznie do nas - do Pointa na Dni Otwarte! Sprawdź co się u nas dzieje :)';
         $workshop ->public = 1;

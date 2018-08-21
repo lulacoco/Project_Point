@@ -22,8 +22,10 @@ body
 {
     display: flex;
     justify-content: space-between;
+    /*flex-direction: row;*/
     background-color: white;
     width: 100%;
+    height: 20%;
 }
 
 .navbar-menu
@@ -34,9 +36,31 @@ body
 
 .navbar-name
 {
-    font-size: 60px;
-    margin-left: 7%;
+    /*font-size: 60px;*/
+    width: fit-content;
+    height: fit-content;
+    /*align-items: center;*/
+    /*align-content: center;*/
+    justify-content: right;
     font-family: 'Josefin Sans', sans-serif;
+    /*font-size-adjust: 0.58;*/
+}
+
+#navbar-name
+{
+    font-size: 400%;
+}
+
+.navbar-logo>img
+{
+    width: 100%;
+    height:50%;
+}
+
+.navbar-logo
+{
+    width: 5%;
+    margin-right: 2%;
 }
 
 .button
@@ -93,10 +117,16 @@ body
     /*bottom:0;*/
     width: 100%;
     height: 125px;
-    background-color: white;
+    /*background-color: white;*/
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.empty-footer
+{
+    width: 13%;
+    height: 5%;
 }
 
 .content
@@ -104,9 +134,10 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 15%;
+    /*margin-left: 10%;*/
     color: black;
     font-size: 15px;
+    width: 80%;
 }
 
 .social-bar
@@ -116,6 +147,7 @@ body
     justify-content: space-evenly;
     /*flex-direction: row;*/
     flex-basis: 13%;
+    width: 10%;
 }
 
 #main
@@ -178,7 +210,7 @@ body
 {
     font-size: 40px;
     color: #32383e;
-    box-shadow: 0px 0px 50px 1px dimgray;
+    filter: brightness(120%);
 }
 
 .description-on-picture
@@ -188,7 +220,7 @@ body
     /*works on chrome*/
     /*position: sticky; */
     z-index: 100;
-    top: 86%;
+    top: 73%;
     width: 50%;
     text-align: center;
     font-size: 15px;
@@ -201,9 +233,9 @@ body
     width: 50%;
     height: 30px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     margin-left: 25%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .beginning
@@ -698,34 +730,104 @@ th, td
 {
     display: flex;
     flex-direction: column;
+    align-self: center;
     width: 100%;
-    background-color: #01000f;;
+    background-color: #01000f;
     background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
+}
+
+#actual-workshops-desc, #past-workshops-desc
+{
+    /*font-family: 'Josefin Sans', sans-serif;*/
+    margin-left: 10%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    color: #ebebeb;
+    background-color: transparent;
+    font-size: xx-large;
 }
 
 iframe
 {
-    width: 90%;
-    height: 37%;
+    width: 70%;
+    height: 60%;
     border-color: transparent;
 }
 
 .actual-workshops, .past-workshops
 {
     /*margin: 0 auto;*/
-    display: block;
+    /*display: block;*/
     margin-top: 1%;
-    margin-left: 10%;
-    /*margin-bottom: 5%;*/
+    /*margin-left: 13%;*/
+    margin-bottom: 5%;
+    /*position: relative;*/
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-#actual-workshops-desc, #past-workshops-desc
+.button-panel
 {
-    font-family: 'Josefin Sans', sans-serif;
-    margin-left: 10%;
-    margin-top: 4%;
-    color: #ebebeb;
-    background-color: transparent;
+    width: 7.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 25%;
+}
 
-    font-size: xx-large;
+.empty
+{
+    width: 7.5%;
+}
+
+#description-button, #sign-up-button
+{
+    background-color: #01000f;
+    color: #5a6268;
+    cursor: pointer;
+    border-radius: 100px;
+    border-color: transparent;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*opacity: 0.8;*/
+    width: 100%;
+    height: 4.5%;
+    font-size: medium;
+}
+
+#description-button:hover, #sign-up-button:hover
+{
+    opacity: 0.58;
+    color: #ebebeb;
+    transition: all 0.2s ease-out;
+
+}
+
+#event-desc, #event-sign-up
+{
+    display:none;
+    color: #ebebeb;
+}
+
+.workshop-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.actual-workshops-name
+{
+    background-color: #ebebeb;
+    opacity: 0.3;
+    width: 100%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*font-size: x-large;*/
+    font-size: 180%;
+    color: black;
 }

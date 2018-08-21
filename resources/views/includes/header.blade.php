@@ -37,13 +37,11 @@
         </div>
     </div>
     <div class="navbar-name">
-        <a class="navbar-item">
+        <div id="navbar-name">
             Point Dance Studio
-        </a>
+        </div>
     </div>
-    <div class="navbar-logo">
-        <a class="navbar-item" href="http://localhost:8000/">
-            <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/11053832_414031055440728_1550582759575169959_n.jpg?_nc_cat=0&oh=f476577c2b4c3c5410f2b5d7a90abe08&oe=5BD9478B" width="200" height="150">
-        </a>
-    </div>
+    <a class="navbar-logo" href="http://localhost:8000/">
+            <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/39878917_2427403967284642_3022746254338686976_n.jpg?_nc_cat=0&oh=c2bd966db3fd550cac705f2cded2c878&oe=5BF06218">
+    </a>
 </nav>

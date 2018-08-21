@@ -3,7 +3,8 @@
 
 <title>Point Dance Studio</title>
 
-<LINK REL="SHORTCUT ICON" HREF="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/11053832_414031055440728_1550582759575169959_n.jpg?_nc_cat=0&oh=f476577c2b4c3c5410f2b5d7a90abe08&oe=5BD9478B">
+<LINK REL="SHORTCUT ICON" HREF="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/39878917_2427403967284642_3022746254338686976_n.jpg?_nc_cat=0&oh=c2bd966db3fd550cac705f2cded2c878&oe=5BF06218">
+
 
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/styles.css') }}" rel="stylesheet">

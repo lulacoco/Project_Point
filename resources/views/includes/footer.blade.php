@@ -1,8 +1,7 @@
 <footer class="footer">
-    <div class="empty">
-
+    <div class="empty-footer">
     </div>
-    <div class="content has-text-centered">
+    <div class="content">
         <a class="footer-item">
             pointdancestudioinfo@gmail.com
         </a>
