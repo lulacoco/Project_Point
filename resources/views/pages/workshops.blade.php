@@ -4,7 +4,7 @@
     <div class="workshops-panel">
 
         <div class="actual-workshops-panel">
-            <div id="actual-workshops-desc">
+            <div class="actual-workshops-desc">
                 Aktualne wydarzenia
             </div>
             @foreach($workshops as $workshop)
@@ -24,20 +24,22 @@
                             <div class="empty"></div>
                             <iframe src={{$workshop->src}} alt={{ $workshop->name }} allowfullscreen></iframe>
                             <div class="button-panel">
-                                <div id="desc-button-trigger">
-                                    <button id="description-button">
+                                <div class="desc-button-trigger">
+                                    <button class="description-button" id="event-button-{{$workshop->id}}" onclick="openDesc({{$workshop->id}})">
                                         Opis
                                     </button>
                                 </div>
-                                <div id="event-desc">
+                                <div class="event-desc" id="event-desc-{{$workshop->id}}">
                                     {{$workshop->description}}
                                 </div>
-                                <div id="sign-up-button-trigger">
-                                    <button id="sign-up-button">
+                                <div class="sign-up-button-trigger">
+                                    <a href="{{ URL::to('workshops/sign-up') }}">
+                                    <button class="sign-up-button" id="sign-up-button-{{$workshop->id}}">
                                         Zapisz się
                                     </button>
+                                    </a>
                                 </div>
-                                <div id="event-sign-up">
+                                <div class="event-sign-up" id="event-sign-up-{{$workshop->id}}">
                                     Tutaj są zapisy
                                 </div>
                             </div>
@@ -69,13 +71,13 @@
                             <div class="empty"></div>
                             <iframe src={{$workshop->src}} alt={{ $workshop->name }} allowfullscreen></iframe>
                             <div class="button-panel">
-                                <div id="desc-button-trigger">
-                                    <button id="description-button">
+                                <div class="desc-button-trigger">
+                                    <button class="description-button" id="event-button-{{$workshop->id}}" onclick="openDesc({{$workshop->id}})">
                                         Opis
                                     </button>
                                 </div>
-                                <div id="event-desc">
-                                    To jest super event
+                                <div class="event-desc" id="event-desc-{{$workshop->id}}">
+                                    {{$workshop->description}}
                                 </div>
                             </div>
                         </div>

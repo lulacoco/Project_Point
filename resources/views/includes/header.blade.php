@@ -29,7 +29,7 @@
                         Kontakt
                     </a>
                     <hr class="dropdown-divider">
-                    <a href="login" class="dropdown-item is-active" href="http://localhost:8000/login">
+                    <a href="registration" class="dropdown-item is-active" href="http://localhost:8000/registration">
                         Zaloguj się
                     </a>
                 </div>

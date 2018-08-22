@@ -1,3 +1,37 @@
+function openDesc(eventId)
+{
+    var eventIdDesc = 'event-desc-'+eventId;
+    var eventIdButton = 'event-button-'+eventId;
+    if(document.getElementById(eventIdDesc).style.display === "none")
+    {
+        document.getElementById(eventIdButton).innerText = 'Zamknij opis';
+        document.getElementById(eventIdDesc).style.display = "block";
+    }
+    else
+    {
+        document.getElementById(eventIdDesc).style.display = "none";
+        document.getElementById(eventIdButton).innerText = 'Opis';
+    }
+}
+
+function openSignUps(eventId)
+{
+    var eventIdSign = 'event-sign-up-'+eventId;
+    if(document.getElementById(eventIdSign).style.display === "none")
+    {
+        document.getElementById(eventIdSign).style.display = "block";
+
+        axios.post('/save', { firstName: 'Marlon', lastName: 'Bernardes' })
+            .then(function(response){
+                console.log('saved successfully')
+            });
+    }
+    else
+    {
+        document.getElementById(eventIdSign).style.display = "none";
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function(event)
 {
     // menu button function
@@ -8,29 +42,6 @@ document.addEventListener("DOMContentLoaded", function(event)
             document.getElementById("dropdown-menu").style.display = "block";
         else
             document.getElementById("dropdown-menu").style.display = "none";
-    })
-
-    //
-    document.getElementById("desc-button-trigger").addEventListener("click", function ()
-    {
-        if(document.getElementById("event-desc").style.display === "none")
-        {
-            document.getElementById("description-button").innerText = 'Zamknij opis';
-            document.getElementById("event-desc").style.display = "block";
-        }
-        else
-        {
-            document.getElementById("event-desc").style.display = "none";
-            document.getElementById("description-button").innerText = 'Opis';
-        }
-    })
-
-    document.getElementById("sign-up-button-trigger").addEventListener("click", function ()
-    {
-        if(document.getElementById("event-sign-up").style.display === "none")
-            document.getElementById("event-sign-up").style.display = "block";
-        else
-            document.getElementById("event-sign-up").style.display = "none";
     })
 });
 

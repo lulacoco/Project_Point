@@ -1,19 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Group;
-//use App\Groups;
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class GroupsController extends Controller
 {
     public function index()
     {
-        $groups = Group::all();
-//        dd($groups);
-        //$participants = json_decode($groups->participants);
-        //$groups = Groups::paginate(10);
-        return view('groups',compact('groups'));
+//        $groups = Group::all();
+//        return view('groups', compact('groups'));
+//
+//        $groups = DB::table('groups')->get();
+//        return view('pages.groups');
+
+        return view('pages.groups', compact('groups'));
     }
 
     public function create()

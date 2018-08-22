@@ -10,7 +10,7 @@ class Workshop_Seeder extends Seeder
 
         $workshop = new Workshop();
         $workshop ->name = 'Casting/Nabór do West Point, No Point, Grupa 3.0, First Point';
-        $workshop ->description = 'Cześć i czołem, zapraszamy wszystkich chętnych na casting do formacji i grup w Point Dance Studio :) W tym roku każdy ma szansę, aby dołączyć do: 
+        $workshop ->description = 'Cześć i czołem, zapraszamy wszystkich chętnych na casting do formacji i grup w Point Dance Studio :) W tym roku każdy ma szansę, aby dołączyć do:
         ■ WEST POINT (prowadzący Greogry i Lukasz), ■ NO POINT (prowadzący Gregory), ■ GRUPA 3.0 (prowadzący Marcin i Gregory), ■ FIRST POINT (prowadzący Gorzki i O-Shit)';
         $workshop ->public = 1;
         $workshop ->start_date = '2018-09-09 11:00:00';
@@ -21,7 +21,7 @@ class Workshop_Seeder extends Seeder
 
         $workshop = new Workshop();
         $workshop ->name = 'Dni Otwarte w Point Dance Studio';
-        $workshop ->description = 'Siemanko cześć i czołem! W tym roku, jak co roku, koniec wakacji oznacza tylko tyle, że coś się kończy, a coś się zaczyna. 
+        $workshop ->description = 'Siemanko cześć i czołem! W tym roku, jak co roku, koniec wakacji oznacza tylko tyle, że coś się kończy, a coś się zaczyna.
         U nas na przykład zaczyna się nowy sezon zajęć tanecznych. W związku z czym zapraszamy serdecznie do nas - do Pointa na Dni Otwarte! Sprawdź co się u nas dzieje :)';
         $workshop ->public = 1;
         $workshop ->start_date = '2018-09-01 13:00:00';

@@ -736,7 +736,7 @@ th, td
     background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
 }
 
-#actual-workshops-desc, #past-workshops-desc
+.actual-workshops-desc, .past-workshops-desc
 {
     /*font-family: 'Josefin Sans', sans-serif;*/
     margin-left: 10%;
@@ -783,7 +783,7 @@ iframe
     width: 7.5%;
 }
 
-#description-button, #sign-up-button
+.description-button, .sign-up-button
 {
     background-color: #01000f;
     color: #5a6268;
@@ -797,7 +797,7 @@ iframe
     font-size: medium;
 }
 
-#description-button:hover, #sign-up-button:hover
+.description-button:hover, .sign-up-button:hover
 {
     opacity: 0.58;
     color: #ebebeb;
@@ -805,7 +805,7 @@ iframe
 
 }
 
-#event-desc, #event-sign-up
+.event-desc, .event-sign-up
 {
     display:none;
     color: #ebebeb;

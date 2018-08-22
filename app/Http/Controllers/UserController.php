@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Groups;
+
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class UserController extends Controller

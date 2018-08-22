@@ -1,48 +1,57 @@
 <?php
+
 use Illuminate\Support\Facades\DB;
 
 
-Route::get('/', function ()
-{
-    return view('pages.home');
+Route::get('/', function () {
+    $homeController = new App\Http\Controllers\HomeController();
+    return $homeController->index();
 });
 
-Route::get('/schedule', function()
-{
-    $events = DB::table('events')->get();
-
-    return view('pages.schedule', compact('events'));
+Route::get('/contact', function () {
+    $contactController = new App\Http\Controllers\ContactController();
+    return $contactController->index();
 });
 
-Route::get('/groups', function()
-{
-//    $groups = DB::table('groups')->get();
-////    return view('pages.groups');
-//    return view('pages.groups', compact('groups'));
-    return view('pages.groups');
+Route::get('/schedule', function () {
+    $scheduleController = new App\Http\Controllers\ScheduleController();
+    return $scheduleController->index();
 });
 
-Route::get('/workshops', function()
-{
-    $workshops = DB::table('workshops')->get();
-
-    return view('pages.workshops', compact('workshops'));
+Route::get('/groups', function () {
+    $groupsController = new App\Http\Controllers\GroupsController();
+    return $groupsController->index();
 });
 
-Route::get('/about', function()
-{
-    $users = DB::table('users')
-        ->join('user_roles', 'users.id','=','user_roles.id')->where('user_roles.role_id','=',2)
-        ->get();
-//    return view('pages.about');
-
-    return view('pages.about', compact('users'));
+Route::get('/workshops', function () {
+    $workshopsController = new App\Http\Controllers\WorkshopsController();
+    return $workshopsController->index();
 });
 
-Route::get('/contact', function()
-{
-    return view('pages.contact');
+Route::get('/about', function () {
+    $aboutController = new App\Http\Controllers\AboutController();
+    return $aboutController->index();
 });
+
+Route::get('/registration', function () {
+    $registrationController = new App\Http\Controllers\RegistrationController();
+    return $registrationController->create();
+});
+
+Route::get('/workshops/sign-up', function () {
+    $userWorkshopApiController = new App\Http\Controllers\Api\UserWorkshopApiController();
+    return $userWorkshopApiController->post();
+});
+
+//Route::post('/workshops', 'UserWorkshopApiController@post');
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
+
+//Route::get('/login', 'SessionsController@create');
+//Route::post('/login', 'SessionsController@store');
+//Route::get('/logout', 'SessionsController@destroy');
+
 
 
 

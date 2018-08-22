@@ -3,11 +3,6 @@
 // moment.locale('pl');
 // document.write("<td>" + moment(date).format("LLLL") + "</td>");
 
-
-
-
-
-
 moment.locale('pl');
 var mydate = '2018-09-03 16:40:00';
 

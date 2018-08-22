@@ -10,7 +10,7 @@ class User extends Model
     use Notifiable;
 
     protected $fillable = [
-        'first_name', 'last_name', 'e_mail', 'age', 'password',
+        'first_name', 'e_mail', 'password',
     ];
 
     protected $guarded = [
@@ -37,7 +37,10 @@ class User extends Model
         return $this->belongsToMany(Group::class, 'user_groups','user_id', 'group_id')->withTimestamps();
     }
 
-
+    public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }
 
     public function hasAnyRole($roles)
     {
