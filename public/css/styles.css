@@ -712,7 +712,7 @@ table
 
 th, td
 {
-    padding: 11px;
+    padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -721,6 +721,12 @@ th, td
 {
     display: flex;
     flex-direction: column;
+}
+
+.event-desc, .event-sign-up
+{
+    display:none;
+    color: #ebebeb;
 }
 
 
@@ -786,26 +792,27 @@ iframe
 .description-button, .sign-up-button
 {
     background-color: #01000f;
+    /*background-color: #32383e;*/
     color: #5a6268;
     cursor: pointer;
     border-radius: 100px;
     border-color: transparent;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*opacity: 0.8;*/
+    opacity: 0.9;
     width: 100%;
     height: 4.5%;
     font-size: medium;
+    /*opacity: 0.75;*/
 }
 
 .description-button:hover, .sign-up-button:hover
 {
-    opacity: 0.58;
+    opacity: 0.59;
     color: #ebebeb;
     transition: all 0.2s ease-out;
-
 }
 
-.event-desc, .event-sign-up
+.workshop-desc, .workshop-sign-up
 {
     display:none;
     color: #ebebeb;

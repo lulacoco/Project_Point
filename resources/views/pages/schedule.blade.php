@@ -14,6 +14,8 @@
             <th>Godzina</th>
             <th>Lekcja</th>
             <th>Opis</th>
+            <th>Zapisy</th>
+
             @foreach($events as $event)
                 <tr>
                     <script>
@@ -24,9 +26,19 @@
                         document.write("<td>" + moment(startDate).format("LL") + "</td>");
                         document.write("<td>" + moment(startDate).format("LT") + " - " + moment(endDate).format("LT") + "</td>");
                     </script>
-                    {{--<td>{{($event->start_date) . " - " . $event->end_date}}</td>--}}
                     <td>{{$event->name}}</td>
                     <td>{{$event->description}}</td>
+                    <td>
+                        <div class="sign-up-button-trigger">
+                            <button class="sign-up-button" id="sign-up-button-{{$event->id}}"
+                                    onclick="openEventSignUps({{$event->id}})">
+                                Zapisz się
+                            </button>
+                        </div>
+                        <div class="event-sign-up" id="event-sign-up-{{$event->id}}">
+                            Tutaj są zapisy
+                        </div>
+                    </td>
                 </tr>
             @endforeach
         </table>

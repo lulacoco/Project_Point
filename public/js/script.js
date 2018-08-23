@@ -1,30 +1,40 @@
-function openDesc(eventId)
+function openDesc(workshopId)
 {
-    var eventIdDesc = 'event-desc-'+eventId;
-    var eventIdButton = 'event-button-'+eventId;
-    if(document.getElementById(eventIdDesc).style.display === "none")
+    var workshopIdDesc = 'workshop-desc-' + workshopId;
+    var workshopIdButton = 'workshop-button-' + workshopId;
+    if(document.getElementById(workshopIdDesc).style.display === "none")
     {
-        document.getElementById(eventIdButton).innerText = 'Zamknij opis';
-        document.getElementById(eventIdDesc).style.display = "block";
+        document.getElementById(workshopIdButton).innerText = 'Zamknij opis';
+        document.getElementById(workshopIdDesc).style.display = "block";
     }
     else
     {
-        document.getElementById(eventIdDesc).style.display = "none";
-        document.getElementById(eventIdButton).innerText = 'Opis';
+        document.getElementById(workshopIdDesc).style.display = "none";
+        document.getElementById(workshopIdButton).innerText = 'Opis';
     }
 }
 
-function openSignUps(eventId)
+function openWorkshopSignUps(workshopId)
 {
-    var eventIdSign = 'event-sign-up-'+eventId;
+    var workshopIdSign = 'workshop-sign-up-' + workshopId;
+    if(document.getElementById(workshopIdSign).style.display === "none")
+    {
+        document.getElementById(workshopIdSign).style.display = "block";
+        window.location.href = "workshops/sign-up-" + workshopId;
+    }
+    else
+    {
+        document.getElementById(workshopIdSign).style.display = "none";
+    }
+}
+
+function openEventSignUps(eventId)
+{
+    var eventIdSign = 'event-sign-up-' + eventId;
     if(document.getElementById(eventIdSign).style.display === "none")
     {
         document.getElementById(eventIdSign).style.display = "block";
-
-        axios.post('/save', { firstName: 'Marlon', lastName: 'Bernardes' })
-            .then(function(response){
-                console.log('saved successfully')
-            });
+        window.location.href = "events/sign-up-" + eventId;
     }
     else
     {

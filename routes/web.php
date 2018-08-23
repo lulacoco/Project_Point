@@ -38,12 +38,15 @@ Route::get('/registration', function () {
     return $registrationController->create();
 });
 
-Route::get('/workshops/sign-up', function () {
-    $userWorkshopApiController = new App\Http\Controllers\Api\UserWorkshopApiController();
-    return $userWorkshopApiController->post();
-});
+Route::get('/events/sign-up-{id}', function ($id) {
+    $userEventApiController = new App\Http\Controllers\Api\UserEventApiController();
+    return $userEventApiController->post($id);
+})->where('id', '[0-9]+');
 
-//Route::post('/workshops', 'UserWorkshopApiController@post');
+Route::get('/workshops/sign-up-{id}', function ($id) {
+    $userWorkshopApiController = new App\Http\Controllers\Api\UserWorkshopApiController();
+    return $userWorkshopApiController->post($id);
+})->where('id', '[0-9]+');
 
 Route::get('/register', 'RegistrationController@create');
 Route::post('register', 'RegistrationController@store');

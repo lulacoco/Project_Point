@@ -3,23 +3,21 @@
 namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use App\User;
 use App\Workshop;
 use App\WorkshopUser;
 
-class UserWorkshopApiController extends Controller
+class UserEventApiController extends Controller
 {
-    public function post($workshop_id)
+    public function post($event_id)
     {
         $user_id = 1;
 
-        DB::table('workshop_users')->insert([
-            'workshop_id' => $workshop_id,
+        DB::table('event_users')->insert([
+            'event_id' => $event_id,
             'user_id' => $user_id,
         ]);
     }
 }
-

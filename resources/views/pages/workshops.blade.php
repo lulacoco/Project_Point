@@ -8,7 +8,7 @@
                 Aktualne wydarzenia
             </div>
             @foreach($workshops as $workshop)
-                @if(($workshop->start_date)>('2018-08-20'))
+                @if(($workshop->start_date)>(date("Y-m-d")))
                     <div class="workshop-box">
                         <div class="actual-workshops-name">
                             {{$workshop->name}}
@@ -25,21 +25,21 @@
                             <iframe src={{$workshop->src}} alt={{ $workshop->name }} allowfullscreen></iframe>
                             <div class="button-panel">
                                 <div class="desc-button-trigger">
-                                    <button class="description-button" id="event-button-{{$workshop->id}}" onclick="openDesc({{$workshop->id}})">
+                                    <button class="description-button" id="workshop-button-{{$workshop->id}}"
+                                            onclick="openDesc({{$workshop->id}})">
                                         Opis
                                     </button>
                                 </div>
-                                <div class="event-desc" id="event-desc-{{$workshop->id}}">
+                                <div class="workshop-desc" id="workshop-desc-{{$workshop->id}}">
                                     {{$workshop->description}}
                                 </div>
                                 <div class="sign-up-button-trigger">
-                                    <a href="{{ URL::to('workshops/sign-up') }}">
-                                    <button class="sign-up-button" id="sign-up-button-{{$workshop->id}}">
+                                    <button class="sign-up-button" id="sign-up-button-{{$workshop->id}}"
+                                            onclick="openWorkshopSignUps({{$workshop->id}})">
                                         Zapisz się
                                     </button>
-                                    </a>
                                 </div>
-                                <div class="event-sign-up" id="event-sign-up-{{$workshop->id}}">
+                                <div class="workshop-sign-up" id="workshop-sign-up-{{$workshop->id}}">
                                     Tutaj są zapisy
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
 
 
         <div class="past-workshops-panel">
-            <div id="past-workshops-desc">
+            <div class="past-workshops-desc">
                 Minione wydarzenia
             </div>
             @foreach($workshops as $workshop)
@@ -72,11 +72,12 @@
                             <iframe src={{$workshop->src}} alt={{ $workshop->name }} allowfullscreen></iframe>
                             <div class="button-panel">
                                 <div class="desc-button-trigger">
-                                    <button class="description-button" id="event-button-{{$workshop->id}}" onclick="openDesc({{$workshop->id}})">
+                                    <button class="description-button" id="workshop-button-{{$workshop->id}}"
+                                            onclick="openDesc({{$workshop->id}})">
                                         Opis
                                     </button>
                                 </div>
-                                <div class="event-desc" id="event-desc-{{$workshop->id}}">
+                                <div class="workshop-desc" id="workshop-desc-{{$workshop->id}}">
                                     {{$workshop->description}}
                                 </div>
                             </div>
