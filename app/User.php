@@ -4,13 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 
-class User extends Model
+
+class User extends Model implements Authenticatable
 {
     use Notifiable;
+    use AuthenticableTrait;
 
     protected $fillable = [
-        'first_name', 'e_mail', 'password',
+        'email',
+        'password',
     ];
 
     protected $guarded = [

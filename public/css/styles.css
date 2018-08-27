@@ -679,7 +679,7 @@ body
     margin-bottom: 3%;
 }
 
-.schedule-panel
+.events-panel
 {
     width: 100%;
     height: max-content;
@@ -693,7 +693,7 @@ body
     background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
 }
 
-#schedule-headline
+#events-headline
 {
     font-size: 40px;
     color: white;
@@ -728,6 +728,37 @@ th, td
     display:none;
     color: #ebebeb;
 }
+
+.event-description-button, .event-sign-up-button
+{
+    background-color: #01000f;
+    color: #5a6268;
+    cursor: pointer;
+    border-radius: 100px;
+    border-color: transparent;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 0.9;
+    width: 120%;
+    height: 20%;
+    font-size: small;
+}
+
+.event-description-button:hover, .event-sign-up-button:hover
+{
+    opacity: 0.59;
+    color: #ebebeb;
+    transition: all 0.2s ease-out;
+}
+
+
+/*.event-desc*/
+/*{*/
+    /*padding: 0 18px;*/
+    /*background-color: white;*/
+    /*max-height: 0;*/
+    /*overflow: hidden;*/
+    /*transition: max-height 0.2s ease-out;*/
+/*}*/
 
 
 /******        Workshop layout      ********/

@@ -1,4 +1,34 @@
-function openDesc(workshopId)
+function openEventDesc(eventId)
+{
+    var eventIdDesc = 'event-desc-' + eventId;
+    var eventIdButton = 'event-button-' + eventId;
+    if(document.getElementById(eventIdDesc).style.display === "none")
+    {
+        document.getElementById(eventIdButton).innerText = 'Zwiń';
+        document.getElementById(eventIdDesc).style.display = "block";
+    }
+    else
+    {
+        document.getElementById(eventIdDesc).style.display = "none";
+        document.getElementById(eventIdButton).innerText = 'Rozwiń';
+    }
+}
+
+function openEventSignUps(eventId)
+{
+    var eventIdSign = 'event-sign-up-' + eventId;
+    if(document.getElementById(eventIdSign).style.display === "none")
+    {
+        document.getElementById(eventIdSign).style.display = "block";
+        window.location.href = "events/sign-up-" + eventId;
+    }
+    else
+    {
+        document.getElementById(eventIdSign).style.display = "none";
+    }
+}
+
+function openWorkshopDesc(workshopId)
 {
     var workshopIdDesc = 'workshop-desc-' + workshopId;
     var workshopIdButton = 'workshop-button-' + workshopId;
@@ -25,20 +55,6 @@ function openWorkshopSignUps(workshopId)
     else
     {
         document.getElementById(workshopIdSign).style.display = "none";
-    }
-}
-
-function openEventSignUps(eventId)
-{
-    var eventIdSign = 'event-sign-up-' + eventId;
-    if(document.getElementById(eventIdSign).style.display === "none")
-    {
-        document.getElementById(eventIdSign).style.display = "block";
-        window.location.href = "events/sign-up-" + eventId;
-    }
-    else
-    {
-        document.getElementById(eventIdSign).style.display = "none";
     }
 }
 

@@ -26,7 +26,7 @@
                             <div class="button-panel">
                                 <div class="desc-button-trigger">
                                     <button class="description-button" id="workshop-button-{{$workshop->id}}"
-                                            onclick="openDesc({{$workshop->id}})">
+                                            onclick="openWorkshopDesc({{$workshop->id}})">
                                         Opis
                                     </button>
                                 </div>
@@ -73,7 +73,7 @@
                             <div class="button-panel">
                                 <div class="desc-button-trigger">
                                     <button class="description-button" id="workshop-button-{{$workshop->id}}"
-                                            onclick="openDesc({{$workshop->id}})">
+                                            onclick="openWorkshopDesc({{$workshop->id}})">
                                         Opis
                                     </button>
                                 </div>

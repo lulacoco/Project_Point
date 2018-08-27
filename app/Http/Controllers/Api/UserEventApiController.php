@@ -18,6 +18,8 @@ class UserEventApiController extends Controller
         DB::table('event_users')->insert([
             'event_id' => $event_id,
             'user_id' => $user_id,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s')
         ]);
     }
 }

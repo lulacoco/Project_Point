@@ -4,36 +4,60 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\DB;
+
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
     protected $redirectTo = '/home';
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function index()
+    {
+        return view('auth.login');
+    }
+
+    function checklogin(Request $request)
+    {
+        $this->validate($request, [
+            'email'   => 'required|email',
+            'password'  => 'required|alphaNum|min:3'
+        ]);
+
+        $user_data = array(
+            'email'  => $request->get('email'),
+            'password' => $request->get('password')
+        );
+
+        if(!Auth::attempt($user_data))
+        {
+            return redirect('/successlogin');
+        }
+        else
+        {
+            return back()->with('error', 'Błędny login lub hasło');
+        }
+    }
+
+    function successlogin()
+    {
+        return view('auth.successlogin');
+    }
+
+    function logout()
+    {
+        Auth::logout();
+        return redirect('login');
+    }
+
 }

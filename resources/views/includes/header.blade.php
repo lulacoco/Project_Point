@@ -13,7 +13,7 @@
                     <a href="/" class="dropdown-item is-active" href="http://localhost:8000/">
                         Strona Główna
                     </a>
-                    <a href="schedule" class="dropdown-item is-active" href="http://localhost:8000/schedule">
+                    <a href="events" class="dropdown-item is-active" href="http://localhost:8000/events">
                         Grafik
                     </a>
                     <a href="groups" class="dropdown-item is-active" href="http://localhost:8000/groups">
@@ -29,7 +29,7 @@
                         Kontakt
                     </a>
                     <hr class="dropdown-divider">
-                    <a href="registration" class="dropdown-item is-active" href="http://localhost:8000/registration">
+                    <a href="login" class="dropdown-item is-active" href="http://localhost:8000/login">
                         Zaloguj się
                     </a>
                 </div>

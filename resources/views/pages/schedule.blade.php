@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
 
-    <div class="schedule-panel">
+    <div class="events-panel">
         <div class="panel">
-            <div id="schedule-headline">
+            <div id="events-headline">
                 Grafik
             </div>
         </div>
@@ -14,6 +14,7 @@
             <th>Godzina</th>
             <th>Lekcja</th>
             <th>Opis</th>
+            <th></th>
             <th>Zapisy</th>
 
             @foreach($events as $event)
@@ -29,8 +30,16 @@
                     <td>{{$event->name}}</td>
                     <td>{{$event->description}}</td>
                     <td>
+                            <button class="event-description-button" id="event-button-{{$event->id}}" onclick="openEventDesc({{$event->id}})">
+                                Rozwiń
+                            </button>
+                        <div class="event-desc" id="event-desc-{{$event->id}}">
+                            {{$event->description}}
+                        </div>
+                    </td>
+                    <td>
                         <div class="sign-up-button-trigger">
-                            <button class="sign-up-button" id="sign-up-button-{{$event->id}}"
+                            <button class="event-sign-up-button" id="sign-up-button-{{$event->id}}"
                                     onclick="openEventSignUps({{$event->id}})">
                                 Zapisz się
                             </button>
@@ -43,5 +52,25 @@
             @endforeach
         </table>
     </div>
+
+
+
+    {{--<script>--}}
+        {{--var acc = document.getElementsByClassName("event-description-button");--}}
+        {{--var i;--}}
+
+        {{--for (i = 0; i < acc.length; i++) {--}}
+            {{--acc[i].addEventListener("click", function() {--}}
+                {{--this.classList.toggle("active");--}}
+                {{--var panel = this.nextElementSibling;--}}
+                {{--if (panel.style.maxHeight){--}}
+                    {{--panel.style.maxHeight = null;--}}
+                {{--} else {--}}
+                    {{--panel.style.maxHeight = panel.scrollHeight + "px";--}}
+                {{--}--}}
+            {{--});--}}
+        {{--}--}}
+    {{--</script>--}}
+
 
 @stop
