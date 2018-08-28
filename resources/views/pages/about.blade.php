@@ -40,5 +40,5 @@
             {{--</div>--}}
             <br></br>
         </div>
-    @endforeach
+        @endforeach
 @stop

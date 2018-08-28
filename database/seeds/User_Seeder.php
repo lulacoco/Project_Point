@@ -19,50 +19,48 @@ class User_Seeder extends Seeder
         $user->groups()->attach(2);
 
 
+        $user = new User();
+        $user->first_name = 'Mariusz';
+        $user->email = 'mariusz.lubawy@gmail.com';
+        $user->password = Hash::make('user2');
+        $user->save();
+        $user->roles()->attach(2);
+        $user->events()->attach(1);
+        $user->workshops()->attach(1);
+        $user->groups()->attach(2);
 
 
-//        $user = new User();
-//        $user->first_name = 'Mariusz';
-//        $user->email = 'mariusz.lubawy@gmail.com';
-//        $user->password = Hash::make('user2');
-//        $user->save();
-//        $user->roles()->attach(2);
-//        $user->events()->attach(1);
-//        $user->workshops()->attach(1);
-//        $user->groups()->attach(2);
-//
-//
-//        $user = new User();
-//        $user->first_name = 'Dominika';
-//        $user->email = 'dominika.jałoszyńska@gmail.com';
-//        $user->password = Hash::make('user3');
-//        $user->save();
-//        $user->roles()->attach(2);
-//        $user->events()->attach(1);
-//        $user->workshops()->attach(1);
-//        $user->groups()->attach(2);
-//
-//
-//        $user = new User();
-//        $user->first_name = 'Marcin';
-//        $user->email = 'marcin.szafranski@gmail.com';
-//        $user->password = Hash::make('user4');
-//        $user->save();
-//        $user->roles()->attach(2);
-//        $user->events()->attach(1);
-//        $user->workshops()->attach(1);
-//        $user->groups()->attach(2);
-//
-//
-//        $user = new User();
-//        $user->first_name = 'Ania';
-//        $user->email = 'ania.kafarska@gmail.com';
-//        $user->password = Hash::make('user5');
-//        $user->save();
-//        $user->roles()->attach(3);
-//        $user->events()->attach(1);
-//        $user->workshops()->attach(1);
-//        $user->groups()->attach(2);
+        $user = new User();
+        $user->first_name = 'Dominika';
+        $user->email = 'dominika.jałoszyńska@gmail.com';
+        $user->password = Hash::make('user3');
+        $user->save();
+        $user->roles()->attach(2);
+        $user->events()->attach(1);
+        $user->workshops()->attach(1);
+        $user->groups()->attach(2);
+
+
+        $user = new User();
+        $user->first_name = 'Marcin';
+        $user->email = 'marcin.szafranski@gmail.com';
+        $user->password = Hash::make('user4');
+        $user->save();
+        $user->roles()->attach(2);
+        $user->events()->attach(1);
+        $user->workshops()->attach(1);
+        $user->groups()->attach(2);
+
+
+        $user = new User();
+        $user->first_name = 'Ania';
+        $user->email = 'ania.kafarska@gmail.com';
+        $user->password = Hash::make('user5');
+        $user->save();
+        $user->roles()->attach(3);
+        $user->events()->attach(1);
+        $user->workshops()->attach(1);
+        $user->groups()->attach(2);
     }
 }
 
