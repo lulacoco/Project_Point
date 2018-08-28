@@ -12,13 +12,8 @@ class Users extends Migration
         {
             $table->increments('id');
             $table->string('first_name');
-            $table->string('last_name');
-            $table->string('display_name');
             $table->string('email');
-            $table->integer('age');
             $table->text('password');
-            $table->text('description');
-            $table->string('src');
         });
     }
 

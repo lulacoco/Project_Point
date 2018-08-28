@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\DB;
 
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $homeController = new App\Http\Controllers\HomeController();
     return $homeController->index();
 });
@@ -33,11 +33,6 @@ Route::get('/about', function () {
     return $aboutController->index();
 });
 
-Route::get('/registration', function () {
-    $registrationController = new App\Http\Controllers\RegistrationController();
-    return $registrationController->create();
-});
-
 Route::get('/events/sign-up-{id}', function ($id) {
     $userEventApiController = new App\Http\Controllers\Api\UserEventApiController();
     return $userEventApiController->post($id);
@@ -47,6 +42,11 @@ Route::get('/workshops/sign-up-{id}', function ($id) {
     $userWorkshopApiController = new App\Http\Controllers\Api\UserWorkshopApiController();
     return $userWorkshopApiController->post($id);
 })->where('id', '[0-9]+');
+
+Route::get('/register', function () {
+    $registerController = new App\Http\Controllers\Auth\RegisterController();
+    return $registerController->index();
+});
 
 Route::get('/login', function () {
     $loginController = new App\Http\Controllers\Auth\LoginController();
@@ -73,20 +73,6 @@ Route::get('/login/logout', function () {
     return $loginController->logout();
 });
 
-
-
-//Route::get('/uploadfile', 'UploadfileController@index');
-//Route::post('/uploadfile', 'UploadfileController@upload');
-
-
-
-
-//Route::get('/register', 'RegistrationController@create');
-//Route::post('register', 'RegistrationController@store');
-
-//Route::get('/login', 'SessionsController@create');
-//Route::post('/login', 'SessionsController@store');
-//Route::get('/logout', 'SessionsController@destroy');
-
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

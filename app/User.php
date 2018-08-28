@@ -14,6 +14,8 @@ class User extends Model implements Authenticatable
     use AuthenticableTrait;
 
     protected $fillable = [
+        'user_id',
+        'first_name',
         'email',
         'password',
     ];
@@ -40,6 +42,11 @@ class User extends Model implements Authenticatable
     public function groups()
     {
         return $this->belongsToMany(Group::class, 'user_groups','user_id', 'group_id')->withTimestamps();
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class)->withDefault();
     }
 
     public function setPasswordAttribute($password)

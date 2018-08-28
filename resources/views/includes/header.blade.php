@@ -10,7 +10,7 @@
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <a href="/" class="dropdown-item is-active" href="http://localhost:8000/">
+                    <a href="/home" class="dropdown-item is-active" href="http://localhost:8000/home">
                         Strona Główna
                     </a>
                     <a href="events" class="dropdown-item is-active" href="http://localhost:8000/events">
@@ -41,7 +41,7 @@
             Point Dance Studio
         </div>
     </div>
-    <a class="navbar-logo" href="http://localhost:8000/">
+    <a class="navbar-logo" href="http://localhost:8000/home">
             <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/39878917_2427403967284642_3022746254338686976_n.jpg?_nc_cat=0&oh=c2bd966db3fd550cac705f2cded2c878&oe=5BF06218">
     </a>
 </nav>

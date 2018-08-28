@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -39,7 +40,8 @@ class LoginController extends Controller
             'password' => $request->get('password')
         );
 
-        if(!Auth::attempt($user_data))
+//        if(Auth::attempt($user_data))
+        if(Auth::check($user_data))
         {
             return redirect('/successlogin');
         }
@@ -59,5 +61,4 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('login');
     }
-
 }
