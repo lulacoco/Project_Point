@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\DB;
 
 
-Route::get('/home', function () {
+Route::get('/', function () {
     $homeController = new App\Http\Controllers\HomeController();
     return $homeController->index();
 });
@@ -75,4 +75,7 @@ Route::get('/login/logout', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function() {
+    $loggedController = new App\Http\Controllers\Auth\LoginController();
+    return $loggedController->logged();
+});
