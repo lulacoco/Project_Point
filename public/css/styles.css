@@ -875,8 +875,9 @@ iframe
 .container
 {
     margin-top: 5%;
-    padding-bottom: 120px;
+    /*padding-bottom: 120px;*/
     width: 60%;
+    min-height: 470px;
 }
 
 .log-reg-button
