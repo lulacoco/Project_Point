@@ -50,7 +50,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-12 offset-md-5">
+                            <div class="col-md-10 offset-md-5">
                                 <button type="submit" class = "log-reg-button">
                                     {{ __('Zaloguj się') }}
                                 </button>
@@ -63,7 +63,7 @@
                     </form>
 
                     <div class="form-group row mb=0">
-                        <div class="col-md-12 offset-md-5">
+                        <div class="col-md-10 offset-md-5">
                         @guest
                                 <button type="submit" class = "log-reg-button">
                                     <a href="{{ route('register')}}">{{ __('Register') }}</a>
