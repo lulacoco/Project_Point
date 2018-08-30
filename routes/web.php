@@ -61,17 +61,10 @@ Route::post('/register', function (Request $request) {
     return $registerController->create($request);
 });
 
-
 Route::get('/login', function () {
     $loginController = new App\Http\Controllers\Auth\LoginController();
     return $loginController->index();
 });
-
-//Route::post('/login/checklogin', function () {
-//    $loginController = new App\Http\Controllers\Auth\LoginController();
-//    return $loginController->checklogin();
-//});
-
 
 Route::get('/successlogin', function () {
     $loginController = new App\Http\Controllers\Auth\LoginController();
