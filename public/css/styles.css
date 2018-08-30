@@ -603,12 +603,6 @@ body {
 .events-panel {
     width: 100%;
     height: max-content;
-    /*-webkit-box-sizing: border-box;*/
-    /*-moz-box-sizing: border-box;*/
-    /*box-sizing: border-box;*/
-    /*height:100%;*/
-    /*padding: 0 20px;*/
-
     background-color: #01000f;;
     background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
 }
@@ -652,8 +646,7 @@ th, td {
 }
 
 .event-desc.open{
-    height: 100px;
-    margin-top: 40px;
+    height: 400px;
 }
 
 .event-desc-button{
@@ -678,15 +671,6 @@ th, td {
     color: #ebebeb;
     transition: all 0.2s ease-out;
 }
-
-/*.event-desc*/
-/*{*/
-/*padding: 0 18px;*/
-/*background-color: white;*/
-/*max-height: 0;*/
-/*overflow: hidden;*/
-/*transition: max-height 0.2s ease-out;*/
-/*}*/
 
 /******        Workshop layout      ********/
 
@@ -771,10 +755,14 @@ iframe {
     height: 0px;
     color: #ebebeb;
     display: block;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
 }
 
 .workshop-desc.open {
-    height: 52px;
+    height: 350px;
+    width: 150px;
+    margin-top: 120px;
 }
 
 .workshop-box {
@@ -853,3 +841,12 @@ iframe {
     font-size: 14px;
 }
 
+/******        Calendar layout      ********/
+
+.calendar
+{
+    height: 500px;
+    width: 500px;
+    size: 500px;
+    margin-left: 100px;
+}

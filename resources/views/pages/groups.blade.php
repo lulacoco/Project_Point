@@ -215,5 +215,4 @@
             <img class ="img" src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/38749082_2397230086968697_1424310412047810560_n.jpg?_nc_cat=0&oh=abab540e676513aca86883ebc1bd4035&oe=5C00AD27" alt="Początkująca">
         </div>
     </div>
-
 @stop

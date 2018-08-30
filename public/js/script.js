@@ -36,20 +36,21 @@ function openWorkshopDesc(workshopId)
     var workshopIdDesc = 'workshop-desc-' + workshopId;
     var workshopIdButton = 'workshop-button-' + workshopId;
 
-    var descElement = $('.'+workshopIdDesc);
+    var descElement = $('#'+workshopIdDesc);
 
 
     if(descElement.hasClass("open"))
     {
-        document.getElementById(workshopIdButton).innerText = 'Zamknij opis';
-        descElement.removeClass("open")
+        document.getElementById(workshopIdButton).innerText = 'Opis';
+        descElement.removeClass("open");
     }
     else
     {
-        document.getElementById(workshopIdDesc).style.display = "none";
-        descElement.addClass("open")
+        document.getElementById(workshopIdButton).innerText = 'Zwiń';
+        descElement.addClass("open");
     }
 }
+
 
 function openWorkshopSignUps(workshopId)
 {

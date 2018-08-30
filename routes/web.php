@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+
 
 
 Route::get('/', function () {
@@ -32,6 +34,11 @@ Route::get('/workshops', function () {
 Route::get('/about', function () {
     $aboutController = new App\Http\Controllers\AboutController();
     return $aboutController->index();
+});
+
+Route::get('/calendar', function () {
+    $calendarController = new App\Http\Controllers\CalendarController();
+    return $calendarController->index();
 });
 
 Route::get('/events/sign-up-{id}', function ($id) {

@@ -30,6 +30,9 @@
                     </a>
                     <hr class="dropdown-divider">
                     @if (Auth::user() !== null)
+                        <a href="calendar" class="dropdown-item is-active">
+                            Twój kalendarz
+                        </a>
                         <a href="logout" class="dropdown-item is-active">
                             Wyloguj się
                         </a>
