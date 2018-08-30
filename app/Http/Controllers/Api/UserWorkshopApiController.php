@@ -22,5 +22,10 @@ class UserWorkshopApiController extends Controller
             'updated_at' => date('Y-m-d H:i:s')
         ]);
     }
+
+    public function remove($workshop_id)
+    {
+        DB::table('workshop_users')->where('workshop_id', '=', $workshop_id)->delete();
+    }
 }
 

@@ -26,6 +26,4 @@ class UserEventApiController extends Controller
     {
         DB::table('event_users')->where('event_id', '=', $event_id)->delete();
     }
-
-
 }

@@ -80,6 +80,22 @@ function openWorkshopSignUps(workshopId)
     }
 }
 
+
+function openWorkshopSignOffs(workshopId)
+{
+    var workshopIdSign = 'workshop-sign-off-' + workshopId;
+    if(document.getElementById(workshopIdSign).style.display === "none")
+    {
+        document.getElementById(workshopIdSign).style.display = "block";
+        window.location.href = "workshops/sign-off-" + workshopId;
+    }
+    else
+    {
+        document.getElementById(workshopIdSign).style.display = "none";
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", function(event)
 {
     // menu button function

@@ -29,7 +29,6 @@
                         document.write("<td>" + moment(startDate).format("LT") + " - " + moment(endDate).format("LT") + "</td>");
                     </script>
                     <td>{{$event_user->name}}</td>
-
                     <td>
                         <div class="sign-off-button-trigger">
                             <button class="event-sign-off-button" id="sign-off-button-{{$event_user->id}}"
@@ -38,12 +37,8 @@
                             </button>
                         </div>
                         <div class="event-sign-off" id="event-sign-off-{{$event_user->id}}">
-                            Zostałeś wypisany
                         </div>
                     </td>
-
-
-
                 </tr>
             @endforeach
 
@@ -58,6 +53,16 @@
                         document.write("<td>" + moment(startDate).format("LT") + " - " + moment(endDate).format("LT") + "</td>");
                     </script>
                     <td>{{$workshop_user->name}}</td>
+                    <td>
+                        <div class="sign-off-button-trigger">
+                            <button class="workshop-sign-off-button" id="sign-off-button-{{$workshop_user->id}}"
+                                    onclick="openWorkshopSignOffs({{$workshop_user->id}})">
+                                Wypisz się
+                            </button>
+                        </div>
+                        <div class="workshop-sign-off" id="workshop-sign-off-{{$workshop_user->id}}">
+                        </div>
+                    </td>
                 </tr>
             @endforeach
 

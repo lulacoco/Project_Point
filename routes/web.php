@@ -56,6 +56,11 @@ Route::get('/workshops/sign-up-{id}', function ($id) {
     return $userWorkshopApiController->post($id);
 })->where('id', '[0-9]+');
 
+Route::get('/workshops/sign-off-{id}', function ($id) {
+    $userWorkshopApiController = new App\Http\Controllers\Api\UserWorkshopApiController();
+    return $userWorkshopApiController->remove($id);
+})->where('id', '[0-9]+');
+
 Route::get('/register', function () {
     $registerController = new App\Http\Controllers\Auth\RegisterController();
     return $registerController->index();

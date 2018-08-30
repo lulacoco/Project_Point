@@ -857,12 +857,14 @@ iframe {
     width: 70%;
 }
 
-.event-sign-off {
+
+.event-sign-off, .workshop-sign-off{
     display: none;
     color: #ebebeb;
 }
 
-.event-sign-off-button {
+
+.event-sign-off-button, .workshop-sign-off-button{
     background-color: #01000f;
     color: #5a6268;
     cursor: pointer;
@@ -875,10 +877,8 @@ iframe {
     font-size: small;
 }
 
-.event-sign-off-button:hover {
+.event-sign-off-button:hover, .workshop-sign-off-button:hover {
     opacity: 0.59;
     color: #ebebeb;
     transition: all 0.2s ease-out;
 }
-
-
