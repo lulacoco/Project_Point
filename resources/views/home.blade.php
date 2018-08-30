@@ -5,11 +5,11 @@
         <div class="card">
             <div class="card-header">Twój status</div>
             <div class="card-body">
-                @if (session('status'))
+                @if (Auth::user() !== null)
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
-                @endif
+
                 Już jesteś zalogowany!
 
                 <div class="logout-button">
@@ -28,6 +28,7 @@
                         @csrf
                     </form>
                 </div>
+                @endif
 
             </div>
         </div>

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
@@ -48,6 +49,12 @@ Route::get('/register', function () {
     return $registerController->index();
 });
 
+Route::post('/register', function (Request $request) {
+    $registerController = new App\Http\Controllers\Auth\RegisterController();
+    return $registerController->create($request);
+});
+
+
 Route::get('/login', function () {
     $loginController = new App\Http\Controllers\Auth\LoginController();
     return $loginController->index();
@@ -59,18 +66,14 @@ Route::get('/login', function () {
 //});
 
 
-
-Route::post('/login/checklogin', 'Auth\LoginController@checklogin');
-
-
 Route::get('/successlogin', function () {
     $loginController = new App\Http\Controllers\Auth\LoginController();
     return $loginController->successlogin();
 });
 
-Route::get('/login/logout', function () {
+Route::get('/logout', function (Request $request) {
     $loginController = new App\Http\Controllers\Auth\LoginController();
-    return $loginController->logout();
+    return $loginController->logout($request);
 });
 
 Auth::routes();

@@ -2,15 +2,18 @@ function openEventDesc(eventId)
 {
     var eventIdDesc = 'event-desc-' + eventId;
     var eventIdButton = 'event-button-' + eventId;
-    if(document.getElementById(eventIdDesc).style.display === "none")
+
+    var descElement = $('#'+eventIdDesc);
+
+    if(descElement.hasClass("open"))
     {
-        document.getElementById(eventIdButton).innerText = 'Zwiń';
-        document.getElementById(eventIdDesc).style.display = "block";
+        document.getElementById(eventIdButton).innerText = 'Opis';
+        descElement.removeClass("open");
     }
     else
     {
-        document.getElementById(eventIdDesc).style.display = "none";
-        document.getElementById(eventIdButton).innerText = 'Rozwiń';
+        document.getElementById(eventIdButton).innerText = 'Zwiń';
+        descElement.addClass("open");
     }
 }
 
@@ -32,15 +35,19 @@ function openWorkshopDesc(workshopId)
 {
     var workshopIdDesc = 'workshop-desc-' + workshopId;
     var workshopIdButton = 'workshop-button-' + workshopId;
-    if(document.getElementById(workshopIdDesc).style.display === "none")
+
+    var descElement = $('.'+workshopIdDesc);
+
+
+    if(descElement.hasClass("open"))
     {
         document.getElementById(workshopIdButton).innerText = 'Zamknij opis';
-        document.getElementById(workshopIdDesc).style.display = "block";
+        descElement.removeClass("open")
     }
     else
     {
         document.getElementById(workshopIdDesc).style.display = "none";
-        document.getElementById(workshopIdButton).innerText = 'Opis';
+        descElement.addClass("open")
     }
 }
 
@@ -62,15 +69,26 @@ document.addEventListener("DOMContentLoaded", function(event)
 {
     // menu button function
 
-    document.getElementById("dropdown-trigger").addEventListener("click", function ()
+    document.getElementById("dropdown-trigger").addEventListener("click", function (e)
     {
-        if(document.getElementById("dropdown-menu").style.display === "none")
-            document.getElementById("dropdown-menu").style.display = "block";
-        else
-            document.getElementById("dropdown-menu").style.display = "none";
-    })
-});
+        e.preventDefault();
+        e.stopPropagation();
 
+        if(document.getElementById("dropdown-menu").style.display === "none") {
+            document.getElementById("dropdown-menu").style.display = "block";
+        }
+        else {
+            document.getElementById("dropdown-menu").style.display = "none";
+        }
+    });
+
+    document.body.addEventListener("click", function ()
+    {
+        if(document.getElementById("dropdown-menu").style.display === "block"){
+            document.getElementById("dropdown-menu").style.display = "none";
+        }
+    });
+});
 
 
 

@@ -29,9 +29,9 @@
                     </script>
                     <td>{{$event->name}}</td>
                     <td>{{$event->description}}</td>
-                    <td>
+                    <td class="event-desc-button">
                             <button class="event-description-button" id="event-button-{{$event->id}}" onclick="openEventDesc({{$event->id}})">
-                                Rozwiń
+                                Opis
                             </button>
                         <div class="event-desc" id="event-desc-{{$event->id}}">
                             {{$event->description}}
@@ -52,25 +52,4 @@
             @endforeach
         </table>
     </div>
-
-
-
-    {{--<script>--}}
-        {{--var acc = document.getElementsByClassName("event-description-button");--}}
-        {{--var i;--}}
-
-        {{--for (i = 0; i < acc.length; i++) {--}}
-            {{--acc[i].addEventListener("click", function() {--}}
-                {{--this.classList.toggle("active");--}}
-                {{--var panel = this.nextElementSibling;--}}
-                {{--if (panel.style.maxHeight){--}}
-                    {{--panel.style.maxHeight = null;--}}
-                {{--} else {--}}
-                    {{--panel.style.maxHeight = panel.scrollHeight + "px";--}}
-                {{--}--}}
-            {{--});--}}
-        {{--}--}}
-    {{--</script>--}}
-
-
 @stop

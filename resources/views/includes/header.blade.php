@@ -10,28 +10,34 @@
             </div>
             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <a href="/" class="dropdown-item is-active" href="http://localhost:8000/">
+                    <a href="/" class="dropdown-item is-active">
                         Strona Główna
                     </a>
-                    <a href="events" class="dropdown-item is-active" href="http://localhost:8000/events">
+                    <a href="events" class="dropdown-item is-active">
                         Grafik
                     </a>
-                    <a href="groups" class="dropdown-item is-active" href="http://localhost:8000/groups">
+                    <a href="groups" class="dropdown-item is-active">
                         Grupy
                     </a>
-                    <a href="workshops" class="dropdown-item is-active" href="http://localhost:8000/workshops">
+                    <a href="workshops" class="dropdown-item is-active">
                         Wydarzenia
                     </a>
-                    <a href="about" class="dropdown-item is-active" href="http://localhost:8000/about">
+                    <a href="about" class="dropdown-item is-active">
                         O nas
                     </a>
-                    <a href="contact" class="dropdown-item is-active" href="http://localhost:8000/contact">
+                    <a href="contact" class="dropdown-item is-active">
                         Kontakt
                     </a>
                     <hr class="dropdown-divider">
-                    <a href="login" class="dropdown-item is-active" href="http://localhost:8000/login">
-                        Zaloguj się
-                    </a>
+                    @if (Auth::user() !== null)
+                        <a href="logout" class="dropdown-item is-active">
+                            Wyloguj się
+                        </a>
+                    @else
+                        <a href="login" class="dropdown-item is-active">
+                            Zaloguj się
+                        </a>
+                    @endif
                 </div>
             </div>
         </div>
@@ -41,7 +47,7 @@
             Point Dance Studio
         </div>
     </div>
-    <a class="navbar-logo" href="http://localhost:8000/">
-            <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/39878917_2427403967284642_3022746254338686976_n.jpg?_nc_cat=0&oh=c2bd966db3fd550cac705f2cded2c878&oe=5BF06218">
+    <a href="/" class="navbar-logo">
+        <img src="https://scontent.fpoz2-1.fna.fbcdn.net/v/t1.0-9/39878917_2427403967284642_3022746254338686976_n.jpg?_nc_cat=0&oh=c2bd966db3fd550cac705f2cded2c878&oe=5BF06218">
     </a>
 </nav>

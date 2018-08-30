@@ -66,7 +66,7 @@
                         <div class="col-md-10 offset-md-5">
                         @guest
                                 <button type="submit" class = "log-reg-button">
-                                    <a href="{{ route('register')}}">{{ __('Register') }}</a>
+                                    <a href="{{ route('register')}}">{{ __('Zarejestruj się') }}</a>
                                 </button>
                         </div>
                         @endguest
