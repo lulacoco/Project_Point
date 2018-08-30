@@ -689,8 +689,17 @@ th, td {
     margin-top: 4%;
     margin-bottom: 4%;
     color: #ebebeb;
+    opacity: 0.85;
     background-color: transparent;
     font-size: xx-large;
+}
+
+.actual-workshops-desc-none {
+    margin-left: 20%;
+    color: #ebebeb;
+    opacity: 0.85;
+    background-color: transparent;
+    font-size: x-large;
 }
 
 iframe {
@@ -845,8 +854,31 @@ iframe {
 
 .calendar
 {
-    height: 500px;
-    width: 500px;
-    size: 500px;
-    margin-left: 100px;
+    width: 70%;
 }
+
+.event-sign-off {
+    display: none;
+    color: #ebebeb;
+}
+
+.event-sign-off-button {
+    background-color: #01000f;
+    color: #5a6268;
+    cursor: pointer;
+    border-radius: 100px;
+    border-color: transparent;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    opacity: 0.9;
+    width: 90px;
+    height: 20%;
+    font-size: small;
+}
+
+.event-sign-off-button:hover {
+    opacity: 0.59;
+    color: #ebebeb;
+    transition: all 0.2s ease-out;
+}
+
+

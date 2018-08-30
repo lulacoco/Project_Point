@@ -31,6 +31,20 @@ function openEventSignUps(eventId)
     }
 }
 
+function openEventSignOffs(eventId)
+{
+    var eventIdSign = 'event-sign-off-' + eventId;
+    if(document.getElementById(eventIdSign).style.display === "none")
+    {
+        document.getElementById(eventIdSign).style.display = "block";
+        window.location.href = "events/sign-off-" + eventId;
+    }
+    else
+    {
+        document.getElementById(eventIdSign).style.display = "none";
+    }
+}
+
 function openWorkshopDesc(workshopId)
 {
     var workshopIdDesc = 'workshop-desc-' + workshopId;

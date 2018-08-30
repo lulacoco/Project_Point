@@ -46,6 +46,11 @@ Route::get('/events/sign-up-{id}', function ($id) {
     return $userEventApiController->post($id);
 })->where('id', '[0-9]+');
 
+Route::get('/events/sign-off-{id}', function ($id) {
+    $userEventApiController = new App\Http\Controllers\Api\UserEventApiController();
+    return $userEventApiController->remove($id);
+})->where('id', '[0-9]+');
+
 Route::get('/workshops/sign-up-{id}', function ($id) {
     $userWorkshopApiController = new App\Http\Controllers\Api\UserWorkshopApiController();
     return $userWorkshopApiController->post($id);

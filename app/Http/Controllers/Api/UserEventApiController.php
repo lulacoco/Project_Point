@@ -21,4 +21,11 @@ class UserEventApiController extends Controller
             'updated_at' => date('Y-m-d H:i:s')
         ]);
     }
+
+    public function remove($event_id)
+    {
+        DB::table('event_users')->where('event_id', '=', $event_id)->delete();
+    }
+
+
 }
