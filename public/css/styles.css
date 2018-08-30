@@ -55,6 +55,22 @@ body {
     margin-right: 2%;
 }
 
+.pic-frame {
+    position: relative;
+}
+
+.outer-pic {
+    width: 100%;
+}
+
+.inner-pic {
+    position: absolute;
+    width: 43%;
+    height: 46%;
+    margin-left: 28%;
+    margin-top: 27%;
+}
+
 .button {
     border-color: transparent;
     background-color: transparent;
@@ -136,6 +152,7 @@ body {
     /*height: 1150px;*/
     height: auto;
     /*padding-bottom: 200px;*/
+    min-height: 530px;;
 }
 
 .essence {
@@ -638,18 +655,18 @@ th, td {
     color: #ebebeb;
 }
 
-.event-desc{
+.event-desc {
     display: block;
     height: 0px;
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
 
-.event-desc.open{
+.event-desc.open {
     height: 400px;
 }
 
-.event-desc-button{
+.event-desc-button {
     width: 90px;
 }
 
@@ -852,19 +869,23 @@ iframe {
 
 /******        Calendar layout      ********/
 
-.calendar
-{
+.calendar-panel {
+    width: 100%;
+    height: max-content;
+    background-color: #01000f;;
+    background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
+}
+
+.calendar {
     width: 70%;
 }
 
-
-.event-sign-off, .workshop-sign-off{
+.event-sign-off, .workshop-sign-off {
     display: none;
     color: #ebebeb;
 }
 
-
-.event-sign-off-button, .workshop-sign-off-button{
+.event-sign-off-button, .workshop-sign-off-button {
     background-color: #01000f;
     color: #5a6268;
     cursor: pointer;
@@ -881,4 +902,14 @@ iframe {
     opacity: 0.59;
     color: #ebebeb;
     transition: all 0.2s ease-out;
+}
+
+#alert {
+    margin-right: 42%;
+    margin-left: 42%;
+}
+
+#negative-alert {
+    margin-right: 38%;
+    margin-left: 38%;
 }

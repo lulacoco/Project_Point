@@ -7,7 +7,16 @@
                 Grafik
             </div>
         </div>
-
+        @if (session('status'))
+            <div class="alert alert-success center-desc" id="alert">
+                {{ session('status') }}
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-danger center-desc" id="negative-alert">
+                {{ session('error') }}
+            </div>
+        @endif
         <table>
             <th>Dzień</th>
             <th>Data</th>
@@ -30,9 +39,10 @@
                     <td>{{$event->name}}</td>
                     <td>{{$event->description}}</td>
                     <td class="event-desc-button">
-                            <button class="event-description-button" id="event-button-{{$event->id}}" onclick="openEventDesc({{$event->id}})">
-                                Opis
-                            </button>
+                        <button class="event-description-button" id="event-button-{{$event->id}}"
+                                onclick="openEventDesc({{$event->id}})">
+                            Opis
+                        </button>
                         <div class="event-desc" id="event-desc-{{$event->id}}">
                             {{$event->description}}
                         </div>
@@ -45,7 +55,7 @@
                             </button>
                         </div>
                         <div class="event-sign-up" id="event-sign-up-{{$event->id}}">
-                            Tutaj są zapisy
+                            {{--Tutaj są zapisy--}}
                         </div>
                     </td>
                 </tr>

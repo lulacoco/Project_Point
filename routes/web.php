@@ -4,8 +4,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
-
-
 Route::get('/', function () {
     $homeController = new App\Http\Controllers\HomeController();
     return $homeController->index();

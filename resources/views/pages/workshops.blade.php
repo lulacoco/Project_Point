@@ -7,6 +7,16 @@
             <div class="actual-workshops-desc">
                 Aktualne wydarzenia
             </div>
+            @if (session('status'))
+                <div class="alert alert-success center-desc" id="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger center-desc" id="negative-alert">
+                    {{ session('error') }}
+                </div>
+            @endif
             @foreach($workshops as $workshop)
                 @if(($workshop->start_date)>(date("Y-m-d")))
                     <div class="workshop-box">
@@ -40,7 +50,7 @@
                                     </button>
                                 </div>
                                 <div class="workshop-sign-up" id="workshop-sign-up-{{$workshop->id}}">
-                                    Tutaj są zapisy
+                                    {{--Tutaj są zapisy--}}
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 
-    <div class="events-panel">
+    <div class="calendar-panel">
         <div class="panel">
             <div id="events-headline">
                 @foreach($event_users as $event_user)
@@ -10,6 +10,11 @@
                 @endforeach
             </div>
         </div>
+        @if (session('status'))
+            <div class="alert alert-warning center-desc" id="alert">
+                {{ session('status') }}
+            </div>
+        @endif
 
         <table class="calendar">
             <th>Dzień</th>
