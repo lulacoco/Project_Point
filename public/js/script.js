@@ -119,6 +119,25 @@ document.addEventListener("DOMContentLoaded", function(event)
             document.getElementById("dropdown-menu").style.display = "none";
         }
     });
+
+    $(document).ready(function () {
+        $("#alert").fadeTo(2000, 600).slideUp(400, function () {
+            $("#alert").slideUp(600);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#negative-alert").fadeTo(2000, 600).slideUp(400, function () {
+            $("#negative-alert").slideUp(600);
+        });
+    });
+
+    $(document).ready(function () {
+        $("#login-alert").fadeTo(2500, 600).slideUp(400, function () {
+            $("#login-alert").slideUp(600);
+        });
+    });
+
 });
 
 
