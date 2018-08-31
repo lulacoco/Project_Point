@@ -57,7 +57,7 @@
                     </div>
                     {{--@elseif(($workshop->start_date)>(date("Y-m-d")))--}}
                     {{--<div class="actual-workshops-desc-none">--}}
-                        {{--Brak aktualnych wydarzeń...--}}
+                    {{--Brak aktualnych wydarzeń...--}}
                     {{--</div>--}}
                     {{--@break--}}
                 @endif

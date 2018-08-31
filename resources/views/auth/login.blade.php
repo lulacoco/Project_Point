@@ -2,6 +2,11 @@
 @section('content')
 
 <div class="container">
+    @if (session('status'))
+        <div class="alert alert-warning center-desc" id="login-alert">
+            {{ session('status') }}
+        </div>
+    @endif
             <div class="card">
                 <div class="card-header">{{ __('Zaloguj się') }}</div>
 

@@ -14,20 +14,21 @@ class UserEventApiController extends Controller
 {
     public function post($event_id)
     {
-            if(DB::table('event_users')->where('event_id', '=', $event_id)->where('user_id','=', Auth::user()->id)->exists())
-        {
-            return redirect('events')->with('error', 'Jesteś już zapisany na te zajęcia!');
-        }
-        else
-        {
-            DB::table('event_users')->insert([
-                'event_id' => $event_id,
-                'user_id' => Auth::user()->id,
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s')
-            ]);
+        if ((Auth::user() === null)) {
+            return redirect('login')->with('status', 'Aby się zapisać musisz się zalogować!');
+        } else {
+            if (DB::table('event_users')->where('event_id', '=', $event_id)->where('user_id', '=', Auth::user()->id)->exists()) {
+                return redirect('events')->with('error', 'Jesteś już zapisany na te zajęcia!');
+            } else {
+                DB::table('event_users')->insert([
+                    'event_id' => $event_id,
+                    'user_id' => Auth::user()->id,
+                    'created_at' => date('Y-m-d H:i:s'),
+                    'updated_at' => date('Y-m-d H:i:s')
+                ]);
 
-            return redirect('events')->with('status', 'Zajęcia dodane!');
+                return redirect('events')->with('status', 'Zajęcia dodane!');
+            }
         }
     }
 

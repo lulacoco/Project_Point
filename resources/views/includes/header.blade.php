@@ -23,7 +23,7 @@
                         Wydarzenia
                     </a>
                     <a href="about" class="dropdown-item is-active">
-                        O nas
+                        Instruktorzy
                     </a>
                     <a href="contact" class="dropdown-item is-active">
                         Kontakt

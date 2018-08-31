@@ -696,8 +696,11 @@ th, td {
     flex-direction: column;
     align-self: center;
     width: 100%;
-    background-color: #01000f;
-    background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
+    /*background-color: #01000f;*/
+    /*background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);*/
+    /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qDiMBJXwyxi5IsNduqcZ6FurpJpR-0AYMuAYB0Cc3VUJkmifUA);*/
+    /*background-image: url(https://onaircode.com/wp-content/uploads/2017/11/Constellation.jpg);*/
+    background-image: url(http://www.kenankomah.com/assets/images/projects/particles.png);
 }
 
 .actual-workshops-desc, .past-workshops-desc {
@@ -766,7 +769,7 @@ iframe {
 }
 
 .description-button:hover, .sign-up-button:hover {
-    opacity: 0.59;
+    opacity: 0.5;
     color: #ebebeb;
     transition: all 0.2s ease-out;
 }
@@ -874,6 +877,7 @@ iframe {
     height: max-content;
     background-color: #01000f;;
     background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
+    min-height: 300px;
 }
 
 .calendar {
@@ -910,6 +914,11 @@ iframe {
 }
 
 #negative-alert {
+    margin-right: 38%;
+    margin-left: 38%;
+}
+
+#login-alert {
     margin-right: 38%;
     margin-left: 38%;
 }
