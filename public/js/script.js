@@ -120,6 +120,29 @@ document.addEventListener("DOMContentLoaded", function(event)
         }
     });
 
+    //logo button trigger
+
+    document.getElementById("pic-frame").addEventListener("click", function (e)
+    {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if(document.getElementById("dropdown-logo-menu").style.display === "none") {
+            document.getElementById("dropdown-logo-menu").style.display = "block";
+        }
+        else {
+            document.getElementById("dropdown-logo-menu").style.display = "none";
+        }
+    });
+
+    document.body.addEventListener("click", function ()
+    {
+        if(document.getElementById("dropdown-logo-menu").style.display === "block"){
+            document.getElementById("dropdown-logo-menu").style.display = "none";
+        }
+    });
+
+
     $(document).ready(function () {
         $("#alert").fadeTo(2000, 600).slideUp(400, function () {
             $("#alert").slideUp(600);

@@ -55,7 +55,7 @@ body {
     margin-right: 2%;
 }
 
-.pic-frame {
+#pic-frame {
     position: relative;
 }
 
@@ -69,6 +69,7 @@ body {
     height: 46%;
     margin-left: 28%;
     margin-top: 27%;
+    cursor: pointer;
 }
 
 .button {
@@ -232,6 +233,12 @@ body {
 
 .dropdown-menu {
     font-size: large;
+}
+
+#dropdown-logo-menu {
+    font-size: large;
+    margin-left: -90%;
+    margin-top: 10%;
 }
 
 .contact-container {
@@ -620,7 +627,7 @@ body {
 .events-panel {
     width: 100%;
     height: max-content;
-    background-color: #01000f;;
+    background-color: #01000f;
     background-image: url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
 }
 
@@ -789,9 +796,9 @@ iframe {
 }
 
 .workshop-desc.open {
-    height: 350px;
+    height: 340px;
     width: 150px;
-    margin-top: 120px;
+    margin-top: 20px;
 }
 
 .workshop-box {

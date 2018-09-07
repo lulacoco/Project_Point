@@ -11,7 +11,7 @@ class Workshop_Seeder extends Seeder
         $workshop = new Workshop();
         $workshop ->name = 'Casting/Nabór do West Point, No Point, Grupa 3.0, First Point';
         $workshop ->description = 'Cześć i czołem, zapraszamy wszystkich chętnych na casting do formacji i grup w Point Dance Studio :) W tym roku każdy ma szansę, aby dołączyć do:
-        ■ WEST POINT (prowadzący Greogry i Lukasz), ■ NO POINT (prowadzący Gregory), ■ GRUPA 3.0 (prowadzący Marcin i Gregory), ■ FIRST POINT (prowadzący Gorzki i O-Shit)';
+        ■ WEST POINT, ■ NO POINT, ■ GRUPA 3.0, ■ FIRST POINT';
         $workshop ->public = 1;
         $workshop ->start_date = '2018-09-09 11:00:00';
         $workshop ->end_date = '2018-09-09 18:00:00';
