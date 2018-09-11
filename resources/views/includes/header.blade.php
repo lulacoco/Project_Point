@@ -59,9 +59,13 @@
                 <div id="pic-frame">
 
                     @foreach($headerData as $fieldName)
-                        <img src="{{$fieldName->src}}" class="inner-pic">
+                         {{--@if((mysql_num_rows($fieldName) !=0 ) && (!empty($row['src'])))--}}
+                                {{--<img src="http://electronics-lab.com/community/uploads/monthly_2017_07/M.png.94343130a0013c7107d988d82c20ddfa.png"--}}
+                                     {{--class="inner-pic">--}}
+                            {{--@else--}}
+                                <img src="{{$fieldName->src}}" class="inner-pic">
+                            {{--@endif--}}
                     @endforeach
-
 
                         {{--<img src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.0-0/p206x206/23844898_10213239778101532_7247512557113780518_n.jpg?_nc_cat=0&oh=79e5868ba0193451bff9d92046267e6f&oe=5BC7C47E"--}}
                          {{--class="inner-pic">--}}
@@ -71,7 +75,7 @@
                 <div class="dropdown-menu" id="dropdown-logo-menu" role="menu">
                     <div class="dropdown-content" id="dropdown-logo-content">
                         @if (Auth::user() !== null)
-                            <a href="calendar" class="dropdown-item is-active">
+                            <a href="profile" class="dropdown-item is-active">
                                 Twój profil
                             </a>
                         @endif

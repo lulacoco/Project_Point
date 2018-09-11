@@ -39,6 +39,11 @@ Route::get('/calendar', function () {
     return $calendarController->index();
 });
 
+Route::get('/profile', function () {
+    $profileController = new App\Http\Controllers\ProfileController();
+    return $profileController->index();
+});
+
 Route::get('/events/sign-up-{id}', function ($id) {
     $userEventApiController = new App\Http\Controllers\Api\UserEventApiController();
     return $userEventApiController->post($id);
@@ -84,9 +89,9 @@ Route::get('/logout', function (Request $request) {
     return $loginController->logout($request);
 });
 
-Auth::routes();
-
 Route::get('/home', function() {
     $loggedController = new App\Http\Controllers\Auth\LoginController();
     return $loggedController->logged();
 });
+
+Auth::routes();

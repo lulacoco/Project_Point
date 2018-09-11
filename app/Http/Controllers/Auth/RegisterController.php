@@ -3,11 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\UserProfile;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Request;
+
 
 class RegisterController extends Controller
 {
@@ -40,6 +41,7 @@ class RegisterController extends Controller
     public function create(array $data)
     {
 //        dd($data);
+
         return User::create([
             'first_name' => $data['name'],
             'email' => $data['email'],
@@ -63,3 +65,5 @@ class RegisterController extends Controller
         return redirect()->to('/');
     }
 }
+
+
