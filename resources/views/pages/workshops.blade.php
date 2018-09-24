@@ -101,6 +101,5 @@
                 @endif
             @endforeach
         </div>
-
     </div>
 @stop

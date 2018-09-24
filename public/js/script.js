@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function(event)
         }
     });
 
-
     $(document).ready(function () {
         $("#alert").fadeTo(2000, 600).slideUp(400, function () {
             $("#alert").slideUp(600);
