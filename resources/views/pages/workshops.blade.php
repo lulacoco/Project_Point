@@ -70,7 +70,7 @@
                 Minione wydarzenia
             </div>
             @foreach($workshops as $workshop)
-                @if(($workshop->start_date)<('2018-08-20'))
+                @if(($workshop->start_date)<(date("Y-m-d")))
                     <div class="workshop-box">
                         <div class="actual-workshops-name">
                             {{$workshop->name}}

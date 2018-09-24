@@ -30,7 +30,6 @@ class RegisterController extends Controller
 
     protected function validator(array $data)
     {
-//        dd($data);
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
@@ -40,8 +39,6 @@ class RegisterController extends Controller
 
     public function create(array $data)
     {
-//        dd($data);
-
         return User::create([
             'first_name' => $data['name'],
             'email' => $data['email'],
@@ -51,7 +48,6 @@ class RegisterController extends Controller
 
     public function store()
     {
-//        dd("lol");
         $this->validate(request(), [
             'first_name' => 'required',
             'e_mail' => 'required|email',

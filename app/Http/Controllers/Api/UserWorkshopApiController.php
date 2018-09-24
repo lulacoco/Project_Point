@@ -30,7 +30,6 @@ class UserWorkshopApiController extends Controller
                 return redirect('workshops')->with('status', 'Wydarzenie dodane!');
             }
         }
-
     }
 
     public function remove($workshop_id)
