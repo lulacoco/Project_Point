@@ -34,10 +34,10 @@ class ProfileController extends Controller
 
         DB::table('user_profiles')->insert([
             'user_id' => Auth::user()->id,
-            'last_name' => 'Przyklad',
-            'display_name' => 'Przyklad',
-            'age' => '11',
-            'description' => 'Przyklad',
+            'last_name' => str_random(10),
+            'display_name' => str_random(10),
+            'age' => mt_rand(10, 99),
+            'description' => str_random(10),
             'src' => $imageName,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s')

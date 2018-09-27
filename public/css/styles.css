@@ -945,7 +945,7 @@ iframe {
     width: auto;
     height: 110%;
     background-image: url(http://www.kenankomah.com/assets/images/projects/particles.png);
-    opacity: 0.85;
+    /*opacity: 0.85;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -986,9 +986,6 @@ iframe {
     justify-content: center;
     align-content: center;
     justify-items: center;
-
-    /**/
-    z-index: 52;
 }
 
 .form-control-profile
@@ -1007,7 +1004,6 @@ iframe {
     margin-left: 40px;
     color: #01000f;
     background-color: #b1dfbb;
-    z-index: -1;
 }
 
 #profile-picture
@@ -1019,11 +1015,11 @@ iframe {
     margin-bottom: 10%;
 }
 
-#profile-picture > .profile-picture
-{
-    background-color: #b9bbbe;
-    opacity: 1;
-}
+/*#profile-picture .profile-picture*/
+/*{*/
+    /*background-color: #b9bbbe;*/
+    /*opacity: 1 !important;*/
+/*}*/
 
 .profile-description-panel
 {
@@ -1097,6 +1093,7 @@ iframe {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    opacity: 0.9;
     display: none;
 }
 
