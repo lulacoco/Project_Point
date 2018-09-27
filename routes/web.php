@@ -49,6 +49,12 @@ Route::post('/profile', function() {
     return $profileController->imageUpload();
 });
 
+//Route::post('/profile', function () {
+//    $profileController = new App\Http\Controllers\ProfileController();
+//    return $profileController->imageRemove();
+//});
+
+
 Route::get('/events/sign-up-{id}', function ($id) {
     $userEventApiController = new App\Http\Controllers\Api\UserEventApiController();
     return $userEventApiController->post($id);

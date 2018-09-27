@@ -15,6 +15,5 @@ class WorkshopsController extends Controller
 
     public function register()
     {
-
     }
 }

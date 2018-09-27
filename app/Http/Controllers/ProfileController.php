@@ -13,12 +13,13 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $user = Auth::user();
+        $id = Auth::user()->getAuthIdentifier();
 
-        $profiles = DB::table('user_profiles')
+        $profile = DB::table('users')
+            ->join('user_profiles', 'user_profiles.user_id', '=', 'users.id')
+            ->where('user_profiles.user_id', '=', $id)
             ->get();
-
-        return view('pages.profile', compact('profiles', $user));
+        return view('pages.profile', compact('profile'));
     }
 
 
@@ -45,7 +46,20 @@ class ProfileController extends Controller
         return back()
             ->with('success','You have successfully upload image.')
             ->with('image',$imageName);
+
+//        $path = 'profile/'.$imageName;
+//        return redirect($path);
     }
+
+
+    //NIE WIEM CZY TO ZOSTANIE!!!
+//    public function imageRemove()
+//    {
+//        $id = Auth::user()->getAuthIdentifier();
+//
+//        DB::table('user_profiles')->where('user_id', '=', $id)->delete();
+//        return redirect('profile');
+//    }
 
     public function create()
     {

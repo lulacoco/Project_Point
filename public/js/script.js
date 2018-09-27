@@ -95,6 +95,21 @@ function openWorkshopSignOffs(workshopId)
     }
 }
 
+//NIE WIEM CZY TO ZOSTANIE!
+// function deletePicture()
+// {
+//     var picture = 'picture-delete';
+//     if(document.getElementById(picture).style.display === "none")
+//     {
+//         document.getElementById(picture).style.display = "block";
+//         window.location.href = "profile";
+//     }
+//     else
+//     {
+//         document.getElementById(picture).style.display = "none";
+//     }
+// }
+
 
 document.addEventListener("DOMContentLoaded", function(event)
 {

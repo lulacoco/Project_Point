@@ -78,6 +78,10 @@
                             <a href="profile" class="dropdown-item is-active">
                                 Twój profil
                             </a>
+                            <hr class="dropdown-divider">
+                            <a href="logout" class="dropdown-item is-active">
+                                Wyloguj się
+                            </a>
                         @endif
                     </div>
                 </div>
