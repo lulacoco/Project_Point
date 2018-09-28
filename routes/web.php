@@ -49,6 +49,11 @@ Route::post('/profile', function() {
     return $profileController->imageUpload();
 });
 
+Route::post('/profile', function(Request $request) {
+    $profileController = new App\Http\Controllers\ProfileController();
+    return $profileController->displayNameUpload($request);
+});
+
 //Route::post('/profile', function () {
 //    $profileController = new App\Http\Controllers\ProfileController();
 //    return $profileController->imageRemove();

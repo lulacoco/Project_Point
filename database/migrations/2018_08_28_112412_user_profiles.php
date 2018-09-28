@@ -11,12 +11,12 @@ class UserProfiles extends Migration
         Schema::create('user_profiles', function (Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->string('last_name');
-            $table->string('display_name');
-            $table->integer('age');
-            $table->text('description');
-            $table->string('src');
+            $table->integer('user_id')->unique();
+            $table->string('last_name')->nullable();
+            $table->string('display_name')->nullable();
+            $table->integer('age')->nullable();
+            $table->text('description')->nullable();
+            $table->string('src')->nullable();
             $table->timestamps();
         });
     }

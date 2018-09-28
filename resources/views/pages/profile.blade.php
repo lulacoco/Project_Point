@@ -2,6 +2,18 @@
 @section('content')
 
     <div class="profile-container">
+
+        @if (count($errors) > 0)
+            <div class="alert alert-danger center-desc" id="login-alert"
+                <strong>Ups!</strong> Coś poszło nie tak.
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="profile-top-info">
             <div class="profile-top-info-content">
                 <div class="profile-picture">
@@ -11,18 +23,8 @@
                             <img src="{{$profile->first()->src}}" id="profile-picture">
                         @endif
 
-                        @if (count($errors) > 0)
-                            <div class="alert alert-danger">
-                                <strong>Ups!</strong> Coś poszło nie tak.
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
-
-                        @if(!empty($profile->first()->id))
+                        {{--@if(!empty($profile->first()->id))--}}
+                            @if(($profile->first()->src!=null))
                             <div class="picture-with-button">
                                 <img src="{{$profile->first()->src}}" id="profile-picture">
                                 <button class="edit-picture-button"> Edytuj zdjęcie </button>
@@ -48,9 +50,13 @@
                     </div>
                 </div>
                 <div class="profile-description-panel">
-                    <div class="profile-name">
-                        lala
-                    </div>
+                    {{--<div class="profile-name">--}}
+                        First Name
+                        <form class="" action="{{URL::to('/profile')}}" method="post">
+                            {{csrf_field()}}
+                            <input type="text" name="display_name">
+                        </form>
+                    {{--</div>--}}
                     <div class="profile-description">
                         Edytuj swój opis...
                     </div>
